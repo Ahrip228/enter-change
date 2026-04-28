@@ -915,15 +915,15 @@
     }
 
     .swap-btn {
-        width: 52px;
-        height: 52px;
-        margin: 12px auto;
+        width: 40px;
+        height: 40px;
+        margin: 8px auto;
         display: block;
     }
 
     .swap-btn svg {
-        width: 24px;
-        height: 24px;
+        width: 18px;
+        height: 18px;
     }
 
     .checkbox-wrapper {
