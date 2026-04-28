@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#00243E">
+    <title>Обмен завершён | Enter-Change</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="adaptive.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Хедер -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <svg width="115" height="40" viewBox="0 0 108.49 47.07" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="#0086b1" fill-rule="evenodd" d="m97.01,15.53h8.18v26.36h-58.83v-2.35l-3.77,2.82,3.77,2.82v-2.35h59.77V14.59h-9.13v.94Z"/>
+                            <path fill="#fff" fill-rule="evenodd" d="m3.28,7.14v10.2h11.7v3.37H3.28c-1.68,0-3.11-1.26-3.28-2.87V5.45c0-.93.76-1.69,1.68-1.69h13.38v3.37H3.28Zm1.84,6.77h9.94v-3.35H5.12v3.35Zm57.96,3.43V7.14h11.78v-3.37h-13.38c-.93,0-1.68.76-1.68,1.69v12.39c.17,1.6,1.6,2.87,3.28,2.87h11.7v-3.37h-11.7Zm1.99-3.32h9.54v-3.55h-9.54v3.55Zm31.05,6.53l-6.41-5.81s1.23,0,2.46-.08c1.14,0,2.9-.66,3.51-2.24.97-2.49.7-6.23-.61-7.48-.61-.58-1.14-1.08-2.81-1.08s-12.39-.08-12.39-.08c-.79,0-1.49.66-1.49,1.41v15.53h3.51V7.25h9.4c.79,0,1.41.58,1.41,1.33v1.74c0,.75-.61,1.33-1.41,1.33h-8.61v3.07h2.37l6.32,5.73,4.74.08ZM35.57,3.77v15.19c0,1-.74,1.75-1.73,1.75h-.91c-.5,0-.91-.17-1.24-.58l-9.66-10.52v11.1h-3.38V4.77c0-.58.41-1,.99-1h1.49c.58,0,1.07.25,1.49.67l9.58,10.85V3.77h3.38Zm20.45,3.42v-3.42h-16.94v3.42h6.74v13.52h3.46V7.19h6.74Z"/>
+                            <path fill="#fff" d="m49.66,28.19v3.08c0,.24.17.4.51.4h4.73v1.29h-1.69v1.53h-1.01v-1.53h-.84v1.53h-1.01v-1.53h-.25c-1.01,0-1.77-.72-1.77-1.61v-3.25c0-.89.76-1.61,1.77-1.61h.25v-1.37h1.01v1.37h.68v-1.37h1.01v1.37h1.69v1.29h-4.73c-.27,0-.34.25-.34.41Zm13.71,4.76v-6.59h-1.29v2.6h-3.94v-2.6h-1.37v6.59h1.37v-2.6h3.94v2.6h1.29Zm16.94-6.59v5.94c0,.41-.33.65-.65.65h-.33c-.16,0-.41-.08-.49-.24l-3.82-4.07v4.31h-1.3v-6.18c0-.24.16-.41.41-.41h.57c.24,0,.41.08.57.24l3.74,4.23v-4.47h1.3Zm3.27,5.22v-3.94h5.17v-1.29h-5.84c-.42,0-.75.32-.75.64v4.82c.08.64.67,1.12,1.42,1.12h4.34c.5,0,.83-.32.83-.72v-2.49c0-.4-.42-.72-.83-.72h-4v1.29h3.34v1.29h-3.67Zm8.49-3.92v3.99h5.13v1.3h-5.13c-.73,0-1.37-.49-1.46-1.14v-4.8c0-.33.37-.65.73-.65h5.86v1.3h-5.13Zm.42,2.67h4.71v-1.35h-4.71v1.35Zm-27.24-.71c0-1.83,1.38-3.25,3.06-3.25h3.52v6.59h-1.15v-1.27h-4.21v1.27h-1.23v-3.33Zm1.23,0v.79h4.21v-2.78h-2.38c-1,0-1.84.87-1.84,1.98Z"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <nav class="nav">
+                    <div class="nav-dropdown">
+                        <button class="nav-dropdown-toggle active" id="exchange-dropdown">
+                            Обмен
+                            <svg class="dropdown-arrow" width="12" height="8" viewBox="0 0 12 8" fill="none">
+                                <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </button>
+                        <div class="nav-dropdown-menu" id="exchange-dropdown-menu">
+                            <a href="index.html" class="nav-dropdown-item">Крипта на крипту</a>
+                            <a href="index-fiat.html" class="nav-dropdown-item">Фиат на крипту / Крипта на фиат</a>
+                            <a href="index-cash.html" class="nav-dropdown-item">Наличные</a>
+                            <a href="index-dex.html" class="nav-dropdown-item">DEX</a>
+                        </div>
+                    </div>
+                    <div class="nav-dropdown">
+                        <button class="nav-dropdown-toggle" id="trade-dropdown">
+                            Торговать
+                            <svg class="dropdown-arrow" width="12" height="8" viewBox="0 0 12 8" fill="none">
+                                <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </button>
+                        <div class="nav-dropdown-menu" id="trade-dropdown-menu">
+                            <a href="trading.html" class="nav-dropdown-item">Спотовая торговля</a>
+                            <a href="convert.html" class="nav-dropdown-item">Конвертация</a>
+                        </div>
+                    </div>
+                    <a href="aml-check.html" class="nav-link">Проверить AML</a>
+                    <a href="about.html" class="nav-link">О нас</a>
+                    <a href="faq.html" class="nav-link">FAQ</a>
+                    <a href="contacts.html" class="nav-link">Контакты</a>
+                </nav>
+
+                <div class="header-settings">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Переключить тему">
+                        <svg class="theme-icon theme-icon-light" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 1V3M12 21V23M4.22 4.22L5.64 5.64M18.36 18.36L19.78 19.78M1 12H3M21 12H23M4.22 19.78L5.64 18.36M18.36 5.64L19.78 4.22" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <svg class="theme-icon theme-icon-dark" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="2" fill="currentColor"/>
+                        </svg>
+                    </button>
+
+                    <div class="language-toggle">
+                        <button class="lang-btn active" data-lang="ru">RU</button>
+                        <button class="lang-btn" data-lang="en">EN</button>
+                    </div>
+                </div>
+
+                <div class="header-actions">
+                    <a href="dashboard.html" class="btn btn-secondary">Войти</a>
+                </div>
+
+                <button class="burger-btn" aria-label="Меню">
+                    <div class="burger-btn-line"></div>
+                    <div class="burger-btn-line"></div>
+                    <div class="burger-btn-line"></div>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Мобильное меню -->
+    <div class="mobile-menu">
+        <button class="mobile-menu-close">&times;</button>
+        <nav class="mobile-nav">
+            <a href="index.html" class="mobile-nav-link active">Крипта на крипту</a>
+            <a href="index-fiat.html" class="mobile-nav-link">Фиат на крипту</a>
+            <a href="index-cash.html" class="mobile-nav-link">Наличные</a>
+            <a href="index-dex.html" class="mobile-nav-link">DEX</a>
+            <a href="trading.html" class="mobile-nav-link">Спотовая торговля</a>
+            <a href="convert.html" class="mobile-nav-link">Конвертация</a>
+            <a href="aml-check.html" class="mobile-nav-link">Проверить AML</a>
+            <a href="about.html" class="mobile-nav-link">О нас</a>
+            <a href="faq.html" class="mobile-nav-link">FAQ</a>
+            <a href="contacts.html" class="mobile-nav-link">Контакты</a>
+        </nav>
+        <div class="mobile-menu-footer">
+            <div class="header-settings">
+                <button class="theme-toggle" aria-label="Переключить тему">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+                        <path d="M12 1V3M12 21V23M4.22 4.22L5.64 5.64M18.36 18.36L19.78 19.78M1 12H3M21 12H23M4.22 19.78L5.64 18.36M18.36 5.64L19.78 4.22" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
+                <div class="language-toggle">
+                    <button class="lang-btn active" data-lang="ru">RU</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+            </div>
+            <a href="dashboard.html" class="btn btn-primary btn-full">Войти</a>
+        </div>
+    </div>
+
+    <!-- Основной контент -->
+    <main class="main">
+        <div class="container">
+            <div class="status-page">
+                <!-- Иконка успеха -->
+                <div class="status-icon success">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                </div>
+
+                <h1 class="status-title">Обмен успешно завершён!</h1>
+                <p class="status-description">Средства отправлены на ваш кошелёк</p>
+
+                <p class="text-muted mb-24 text-sm">Заявка #EX-2026-78432</p>
+
+                <!-- Детали заявки -->
+                <div class="order-details text-left">
+                    <div class="order-detail-row">
+                        <span class="order-detail-label">Направление</span>
+                        <span class="order-detail-value"><img class="currency-icon" src="https://s2.coinmarketcap.com/static/img/coins/64x64/1.png" alt="BTC" width="20" height="20"> BTC &rarr; <img class="currency-icon" src="https://s2.coinmarketcap.com/static/img/coins/64x64/825.png" alt="USDT" width="20" height="20"> USDT</span>
+                    </div>
+                    <div class="order-detail-row">
+                        <span class="order-detail-label">Отправлено</span>
+                        <span class="order-detail-value"><img class="currency-icon" src="https://s2.coinmarketcap.com/static/img/coins/64x64/1.png" alt="BTC" width="20" height="20"> 1.00000000 BTC</span>
+                    </div>
+                    <div class="order-detail-row">
+                        <span class="order-detail-label">Получено</span>
+                        <span class="order-detail-value"><img class="currency-icon" src="https://s2.coinmarketcap.com/static/img/coins/64x64/825.png" alt="USDT" width="20" height="20"> 45,320.00 USDT</span>
+                    </div>
+                </div>
+
+                <div class="text-left mt-16">
+                    <label class="form-label">TX Hash</label>
+                    <div class="copy-field">
+                        <span class="copy-value text-sm">0x7f9e8d7c6b5a4e3f2d1c0b9a8e7f6d5c4b3a2e1f0d9c8b7a6e5f4d3c2b1a0e9f</span>
+                        <button class="copy-btn">Копировать</button>
+                    </div>
+                </div>
+
+                <!-- Кнопки -->
+                <div class="d-flex gap-16 mt-32" style="justify-content: center; flex-wrap: wrap; max-width: 500px; margin-left: auto; margin-right: auto;">
+                    <a href="index.html" class="btn btn-primary flex-1">Новый обмен</a>
+                    <a href="#" class="btn btn-outline flex-1">Оставить отзыв</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <a href="index.html">
+                            <svg width="100" height="36" viewBox="0 0 108.49 47.07" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="#0086b1" fill-rule="evenodd" d="m97.01,15.53h8.18v26.36h-58.83v-2.35l-3.77,2.82,3.77,2.82v-2.35h59.77V14.59h-9.13v.94Z"/>
+                                <path fill="#fff" fill-rule="evenodd" d="m3.28,7.14v10.2h11.7v3.37H3.28c-1.68,0-3.11-1.26-3.28-2.87V5.45c0-.93.76-1.69,1.68-1.69h13.38v3.37H3.28Zm1.84,6.77h9.94v-3.35H5.12v3.35Zm57.96,3.43V7.14h11.78v-3.37h-13.38c-.93,0-1.68.76-1.68,1.69v12.39c.17,1.6,1.6,2.87,3.28,2.87h11.7v-3.37h-11.7Zm1.99-3.32h9.54v-3.55h-9.54v3.55Zm31.05,6.53l-6.41-5.81s1.23,0,2.46-.08c1.14,0,2.9-.66,3.51-2.24.97-2.49.7-6.23-.61-7.48-.61-.58-1.14-1.08-2.81-1.08s-12.39-.08-12.39-.08c-.79,0-1.49.66-1.49,1.41v15.53h3.51V7.25h9.4c.79,0,1.41.58,1.41,1.33v1.74c0,.75-.61,1.33-1.41,1.33h-8.61v3.07h2.37l6.32,5.73,4.74.08ZM35.57,3.77v15.19c0,1-.74,1.75-1.73,1.75h-.91c-.5,0-.91-.17-1.24-.58l-9.66-10.52v11.1h-3.38V4.77c0-.58.41-1,.99-1h1.49c.58,0,1.07.25,1.49.67l9.58,10.85V3.77h3.38Zm20.45,3.42v-3.42h-16.94v3.42h6.74v13.52h3.46V7.19h6.74Z"/>
+                                <path fill="#fff" d="m49.66,28.19v3.08c0,.24.17.4.51.4h4.73v1.29h-1.69v1.53h-1.01v-1.53h-.84v1.53h-1.01v-1.53h-.25c-1.01,0-1.77-.72-1.77-1.61v-3.25c0-.89.76-1.61,1.77-1.61h.25v-1.37h1.01v1.37h.68v-1.37h1.01v1.37h1.69v1.29h-4.73c-.27,0-.34.25-.34.41Zm13.71,4.76v-6.59h-1.29v2.6h-3.94v-2.6h-1.37v6.59h1.37v-2.6h3.94v2.6h1.29Zm16.94-6.59v5.94c0,.41-.33.65-.65.65h-.33c-.16,0-.41-.08-.49-.24l-3.82-4.07v4.31h-1.3v-6.18c0-.24.16-.41.41-.41h.57c.24,0,.41.08.57.24l3.74,4.23v-4.47h1.3Zm3.27,5.22v-3.94h5.17v-1.29h-5.84c-.42,0-.75.32-.75.64v4.82c.08.64.67,1.12,1.42,1.12h4.34c.5,0,.83-.32.83-.72v-2.49c0-.4-.42-.72-.83-.72h-4v1.29h3.34v1.29h-3.67Zm8.49-3.92v3.99h5.13v1.3h-5.13c-.73,0-1.37-.49-1.46-1.14v-4.8c0-.33.37-.65.73-.65h5.86v1.3h-5.13Zm.42,2.67h4.71v-1.35h-4.71v1.35Zm-27.24-.71c0-1.83,1.38-3.25,3.06-3.25h3.52v6.59h-1.15v-1.27h-4.21v1.27h-1.23v-3.33Zm1.23,0v.79h4.21v-2.78h-2.38c-1,0-1.84.87-1.84,1.98Z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <p>Enter Change &mdash; ваш надёжный партнёр в мире цифровых валют с 2020 года.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Сервис</h4>
+                    <div class="footer-links">
+                        <a href="index.html" class="footer-link">Обмен крипты</a>
+                        <a href="index-fiat.html" class="footer-link">Обмен за фиат</a>
+                        <a href="index-cash.html" class="footer-link">Обмен за наличные</a>
+                        <a href="index-dex.html" class="footer-link">DEX обмен</a>
+                        <a href="aml-check.html" class="footer-link">AML проверка</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Информация</h4>
+                    <div class="footer-links">
+                        <a href="about.html" class="footer-link">О нас</a>
+                        <a href="faq.html" class="footer-link">FAQ</a>
+                        <a href="blog.html" class="footer-link">Блог</a>
+                        <a href="contacts.html" class="footer-link">Контакты</a>
+                        <a href="referral.html" class="footer-link">Реферальная программа</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Документы</h4>
+                    <div class="footer-links">
+                        <a href="terms.html" class="footer-link">Правила использования</a>
+                        <a href="aml.html" class="footer-link">AML регламент</a>
+                        <a href="privacy.html" class="footer-link">Политика конфиденциальности</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span class="footer-copyright">&copy; 2020&ndash;2026 Enter-Change. Все права защищены.</span>
+                <div class="footer-socials">
+                    <a href="#" class="footer-social" aria-label="Telegram">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.461-1.901-.903-1.056-.693-1.653-1.124-2.678-1.8-1.185-.781-.417-1.21.258-1.911.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.139-5.062 3.345-.479.329-.913.489-1.302.481-.428-.009-1.252-.242-1.865-.44-.752-.244-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.831-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635.099-.002.321.023.465.141.12.098.153.229.168.327.016.098.036.322.02.496z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="footer-social" aria-label="Email">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="4" width="20" height="16" rx="2"/>
+                            <path d="M22 7L13.03 12.7a1.94 1.94 0 01-2.06 0L2 7"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

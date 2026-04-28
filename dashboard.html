@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#00243E">
+    <title>Личный кабинет | Enter-Change</title>
+    <meta name="description" content="Личный кабинет пользователя Enter-Change. Управляйте заявками, бонусами и настройками.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="adaptive.css">
+    <script src="script.js" defer></script>
+    <script src="aml-toggle.js" defer></script>
+</head>
+<body>
+    <!-- Хедер -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <svg width="115" height="40" viewBox="0 0 108.49 47.07" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="#0086b1" fill-rule="evenodd" d="m97.01,15.53h8.18v26.36h-58.83v-2.35l-3.77,2.82,3.77,2.82v-2.35h59.77V14.59h-9.13v.94Z"/>
+                            <path fill="#fff" fill-rule="evenodd" d="m3.28,7.14v10.2h11.7v3.37H3.28c-1.68,0-3.11-1.26-3.28-2.87V5.45c0-.93.76-1.69,1.68-1.69h13.38v3.37H3.28Zm1.84,6.77h9.94v-3.35H5.12v3.35Zm57.96,3.43V7.14h11.78v-3.37h-13.38c-.93,0-1.68.76-1.68,1.69v12.39c.17,1.6,1.6,2.87,3.28,2.87h11.7v-3.37h-11.7Zm1.99-3.32h9.54v-3.55h-9.54v3.55Zm31.05,6.53l-6.41-5.81s1.23,0,2.46-.08c1.14,0,2.9-.66,3.51-2.24.97-2.49.7-6.23-.61-7.48-.61-.58-1.14-1.08-2.81-1.08s-12.39-.08-12.39-.08c-.79,0-1.49.66-1.49,1.41v15.53h3.51V7.25h9.4c.79,0,1.41.58,1.41,1.33v1.74c0,.75-.61,1.33-1.41,1.33h-8.61v3.07h2.37l6.32,5.73,4.74.08ZM35.57,3.77v15.19c0,1-.74,1.75-1.73,1.75h-.91c-.5,0-.91-.17-1.24-.58l-9.66-10.52v11.1h-3.38V4.77c0-.58.41-1,.99-1h1.49c.58,0,1.07.25,1.49.67l9.58,10.85V3.77h3.38Zm20.45,3.42v-3.42h-16.94v3.42h6.74v13.52h3.46V7.19h6.74Z"/>
+                            <path fill="#fff" d="m49.66,28.19v3.08c0,.24.17.4.51.4h4.73v1.29h-1.69v1.53h-1.01v-1.53h-.84v1.53h-1.01v-1.53h-.25c-1.01,0-1.77-.72-1.77-1.61v-3.25c0-.89.76-1.61,1.77-1.61h.25v-1.37h1.01v1.37h.68v-1.37h1.01v1.37h1.69v1.29h-4.73c-.27,0-.34.25-.34.41Zm13.71,4.76v-6.59h-1.29v2.6h-3.94v-2.6h-1.37v6.59h1.37v-2.6h3.94v2.6h1.29Zm16.94-6.59v5.94c0,.41-.33.65-.65.65h-.33c-.16,0-.41-.08-.49-.24l-3.82-4.07v4.31h-1.3v-6.18c0-.24.16-.41.41-.41h.57c.24,0,.41.08.57.24l3.74,4.23v-4.47h1.3Zm3.27,5.22v-3.94h5.17v-1.29h-5.84c-.42,0-.75.32-.75.64v4.82c.08.64.67,1.12,1.42,1.12h4.34c.5,0,.83-.32.83-.72v-2.49c0-.4-.42-.72-.83-.72h-4v1.29h3.34v1.29h-3.67Zm8.49-3.92v3.99h5.13v1.3h-5.13c-.73,0-1.37-.49-1.46-1.14v-4.8c0-.33.37-.65.73-.65h5.86v1.3h-5.13Zm.42,2.67h4.71v-1.35h-4.71v1.35Zm-27.24-.71c0-1.83,1.38-3.25,3.06-3.25h3.52v6.59h-1.15v-1.27h-4.21v1.27h-1.23v-3.33Zm1.23,0v.79h4.21v-2.78h-2.38c-1,0-1.84.87-1.84,1.98Z"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <nav class="nav">
+                    <div class="nav-dropdown">
+                        <button class="nav-dropdown-toggle" id="exchange-dropdown">
+                            Обмен
+                            <svg class="dropdown-arrow" width="12" height="8" viewBox="0 0 12 8" fill="none">
+                                <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </button>
+                        <div class="nav-dropdown-menu" id="exchange-dropdown-menu">
+                            <a href="index.html" class="nav-dropdown-item">Крипта на крипту</a>
+                            <a href="index-fiat.html" class="nav-dropdown-item">Фиат на крипту / Крипта на фиат</a>
+                            <a href="index-cash.html" class="nav-dropdown-item">Наличные</a>
+                            <a href="index-dex.html" class="nav-dropdown-item">DEX</a>
+                        </div>
+                    </div>
+                    <div class="nav-dropdown">
+                        <button class="nav-dropdown-toggle" id="trade-dropdown">
+                            Торговать
+                            <svg class="dropdown-arrow" width="12" height="8" viewBox="0 0 12 8" fill="none">
+                                <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </button>
+                        <div class="nav-dropdown-menu" id="trade-dropdown-menu">
+                            <a href="trading.html" class="nav-dropdown-item">Спотовая торговля</a>
+                            <a href="convert.html" class="nav-dropdown-item">Конвертация</a>
+                        </div>
+                    </div>
+                    <a href="aml-check.html" class="nav-link">Проверить AML</a>
+                    <a href="about.html" class="nav-link">О нас</a>
+                    <a href="faq.html" class="nav-link">FAQ</a>
+                    <a href="contacts.html" class="nav-link">Контакты</a>
+                </nav>
+
+                <div class="header-settings">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Переключить тему">
+                        <svg class="theme-icon theme-icon-light" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 1V3M12 21V23M4.22 4.22L5.64 5.64M18.36 18.36L19.78 19.78M1 12H3M21 12H23M4.22 19.78L5.64 18.36M18.36 5.64L19.78 4.22" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <svg class="theme-icon theme-icon-dark" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="2" fill="currentColor"/>
+                        </svg>
+                    </button>
+
+                    <div class="language-toggle">
+                        <button class="lang-btn active" data-lang="ru">RU</button>
+                        <button class="lang-btn" data-lang="en">EN</button>
+                    </div>
+                </div>
+
+                <div class="header-actions">
+                    <a href="dashboard.html" class="btn btn-secondary">Кабинет</a>
+                </div>
+
+                <button class="burger-btn" aria-label="Меню">
+                    <div class="burger-btn-line"></div>
+                    <div class="burger-btn-line"></div>
+                    <div class="burger-btn-line"></div>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Мобильное меню -->
+    <div class="mobile-menu">
+        <button class="mobile-menu-close">&times;</button>
+        <nav class="mobile-nav">
+            <a href="index.html" class="mobile-nav-link">Крипта на крипту</a>
+            <a href="index-fiat.html" class="mobile-nav-link">Фиат на крипту</a>
+            <a href="index-cash.html" class="mobile-nav-link">Наличные</a>
+            <a href="index-dex.html" class="mobile-nav-link">DEX</a>
+            <a href="trading.html" class="mobile-nav-link">Спотовая торговля</a>
+            <a href="convert.html" class="mobile-nav-link">Конвертация</a>
+            <a href="aml-check.html" class="mobile-nav-link">Проверить AML</a>
+            <a href="about.html" class="mobile-nav-link">О нас</a>
+            <a href="faq.html" class="mobile-nav-link">FAQ</a>
+            <a href="contacts.html" class="mobile-nav-link">Контакты</a>
+        </nav>
+        <div class="mobile-menu-footer">
+            <div class="header-settings">
+                <button class="theme-toggle" aria-label="Переключить тему">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+                        <path d="M12 1V3M12 21V23M4.22 4.22L5.64 5.64M18.36 18.36L19.78 19.78M1 12H3M21 12H23M4.22 19.78L5.64 18.36M18.36 5.64L19.78 4.22" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
+                <div class="language-toggle">
+                    <button class="lang-btn active" data-lang="ru">RU</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+            </div>
+            <a href="dashboard.html" class="btn btn-primary btn-full">Кабинет</a>
+        </div>
+    </div>
+
+    <!-- Основной контент -->
+    <main class="main">
+        <div class="container">
+            <div class="dashboard-layout">
+                <!-- Сайдбар -->
+                <aside class="dashboard-sidebar">
+                    <nav class="sidebar-nav">
+                        <a href="#orders" class="sidebar-link active" onclick="showSection('orders', this)">
+                            <svg class="sidebar-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M3 9H21M9 21V9" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            Мои заявки
+                        </a>
+                        <a href="#bonuses" class="sidebar-link" onclick="showSection('bonuses', this)">
+                            <svg class="sidebar-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            </svg>
+                            Промокоды
+                        </a>
+                        <a href="#referral" class="sidebar-link" onclick="showSection('referral', this)">
+                            <svg class="sidebar-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M16 21V19C16 16.79 14.21 15 12 15H5C2.79 15 1 16.79 1 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <circle cx="8.5" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
+                                <path d="M20 8V14M17 11H23" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            Реферальная программа
+                        </a>
+                        <a href="#aml-checks" class="sidebar-link" onclick="showSection('aml-checks', this)">
+                            <svg class="sidebar-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="currentColor" stroke-width="2"/>
+                                <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            AML проверки
+                        </a>
+                        <a href="#settings" class="sidebar-link" onclick="showSection('settings', this)">
+                            <svg class="sidebar-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+                                <path d="M12 1V3M12 21V23M4.22 4.22L5.64 5.64M18.36 18.36L19.78 19.78M1 12H3M21 12H23M4.22 19.78L5.64 18.36M18.36 5.64L19.78 4.22" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            Настройки
+                        </a>
+                    </nav>
+                </aside>
+
+                <!-- Контент -->
+                <div class="dashboard-content">
+                    <!-- Мои заявки -->
+                    <div id="orders" class="dashboard-section">
+                        <h2 class="mb-24">Мои заявки</h2>
+
+                        <div class="filter-pills">
+                            <button class="filter-pill">Все</button>
+                            <button class="filter-pill active">Активные</button>
+                            <button class="filter-pill">Завершённые</button>
+                            <button class="filter-pill">Отменённые</button>
+                        </div>
+
+                        <div class="table-wrapper">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Направление</th>
+                                        <th>Сумма</th>
+                                        <th>Статус</th>
+                                        <th>Дата</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#EC-847291</td>
+                                        <td>
+                                            <span class="direction-pair">
+                                                <span class="direction-pair-coin"><img class="currency-icon" src="https://s2.coinmarketcap.com/static/img/coins/64x64/1.png" alt="BTC"> BTC</span>
+                                                <span class="direction-pair-arrow">&rarr;</span>
+                                                <span class="direction-pair-coin"><img class="currency-icon" src="https://s2.coinmarketcap.com/static/img/coins/64x64/825.png" alt="USDT"> USDT</span>
+                                            </span>
+                                        </td>
+                                        <td>0.5 BTC</td>
+                                        <td><span class="status-badge status-success">Завершён</span></td>
+                                        <td>12.03.2026</td>
+                                    </tr>
+                                    <tr>
+                                        <td>#EC-847315</td>
+                                        <td>
+                                            <span class="direction-pair">
+                                                <span class="direction-pair-coin"><img class="currency-icon" src="https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png" alt="ETH"> ETH</span>
+                                                <span class="direction-pair-arrow">&rarr;</span>
+                                                <span class="direction-pair-coin"><img class="currency-icon" src="https://s2.coinmarketcap.com/static/img/coins/64x64/1.png" alt="BTC"> BTC</span>
+                                            </span>
+                                        </td>
+                                        <td>5.0 ETH</td>
+                                        <td><span class="status-badge status-pending">В обработке</span></td>
+                                        <td>11.03.2026</td>
+                                    </tr>
+                                    <tr>
+                                        <td>#EC-847102</td>
+                                        <td>
+                                            <span class="direction-pair">
+                                                <span class="direction-pair-coin"><img class="currency-icon" src="https://s2.coinmarketcap.com/static/img/coins/64x64/825.png" alt="USDT"> USDT</span>
+                                                <span class="direction-pair-arrow">&rarr;</span>
+                                                <span class="direction-pair-coin"><img class="currency-icon" src="https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png" alt="ETH"> ETH</span>
+                                            </span>
+                                        </td>
+                                        <td>1,000 USDT</td>
+                                        <td><span class="status-badge status-error">Отменён</span></td>
+                                        <td>10.03.2026</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Мои промокоды -->
+                    <div id="bonuses" class="dashboard-section hidden">
+                        <h2 class="mb-24">Мои промокоды</h2>
+
+                        <div class="d-flex flex-column gap-16">
+                            <!-- Промокод 1 -->
+                            <div class="card card-md promo-card">
+                                <div class="promo-card-header">
+                                    <span class="status-badge status-success">Активен</span>
+                                </div>
+                                <div class="copy-field mt-12">
+                                    <span class="copy-value font-semibold">WELCOME2026</span>
+                                    <button class="copy-btn">Копировать</button>
+                                </div>
+                                <div class="promo-usage mt-12">
+                                    <span class="text-muted text-sm">Осталось использований: <strong>3 из 10</strong></span>
+                                </div>
+                                <div class="promo-usage-bar mt-8">
+                                    <div class="promo-usage-bar-fill" style="width: 70%;"></div>
+                                </div>
+                            </div>
+
+                            <!-- Промокод 2 -->
+                            <div class="card card-md promo-card">
+                                <div class="promo-card-header">
+                                    <span class="status-badge status-neutral">Использован</span>
+                                </div>
+                                <div class="copy-field mt-12">
+                                    <span class="copy-value font-semibold" style="opacity: 0.5;">CRYPTO15</span>
+                                    <button class="copy-btn" disabled>Копировать</button>
+                                </div>
+                                <div class="promo-usage mt-12">
+                                    <span class="text-muted text-sm">Осталось использований: <strong>0 из 5</strong></span>
+                                </div>
+                                <div class="promo-usage-bar mt-8">
+                                    <div class="promo-usage-bar-fill depleted" style="width: 100%;"></div>
+                                </div>
+                            </div>
+
+                            <!-- Промокод 3 -->
+                            <div class="card card-md promo-card">
+                                <div class="promo-card-header">
+                                    <span class="status-badge status-success">Активен</span>
+                                </div>
+                                <div class="copy-field mt-12">
+                                    <span class="copy-value font-semibold">SPRING2026</span>
+                                    <button class="copy-btn">Копировать</button>
+                                </div>
+                                <div class="promo-usage mt-12">
+                                    <span class="text-muted text-sm">Осталось использований: <strong>7 из 7</strong></span>
+                                </div>
+                                <div class="promo-usage-bar mt-8">
+                                    <div class="promo-usage-bar-fill" style="width: 0%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Реферальная программа -->
+                    <div id="referral" class="dashboard-section hidden">
+                        <h2 class="mb-24">Реферальная программа</h2>
+
+                        <!-- Навигация по подразделам -->
+                        <div class="ref-tabs mb-24">
+                            <button class="ref-tab active" onclick="showRefTab('ref-overview', this)">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M3 9L12 2L21 9V20C21 20.55 20.55 21 20 21H4C3.45 21 3 20.55 3 20V9Z"/>
+                                    <polyline points="9 22 9 12 15 12 15 22"/>
+                                </svg>
+                                Обзор
+                            </button>
+                            <button class="ref-tab" onclick="showRefTab('ref-withdraw', this)">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="4" width="20" height="16" rx="2"/>
+                                    <path d="M12 9V15M9 12H15"/>
+                                </svg>
+                                Вывод средств
+                            </button>
+                            <button class="ref-tab" onclick="showRefTab('ref-promo', this)">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="3" width="20" height="14" rx="2"/>
+                                    <path d="M8 21H16M12 17V21"/>
+                                </svg>
+                                Промоматериалы
+                            </button>
+                        </div>
+
+                        <!-- Подраздел: Обзор -->
+                        <div id="ref-overview" class="ref-tab-content">
+                            <div class="card card-md mb-24">
+                                <h4 class="mb-12">Ваша реферальная ссылка</h4>
+                                <div class="copy-field">
+                                    <span class="copy-value">https://enter-change.com/ref/USER847291</span>
+                                    <button class="copy-btn">Копировать</button>
+                                </div>
+                            </div>
+
+                            <div class="grid-2 mb-24">
+                                <div class="card card-md text-center">
+                                    <div class="text-3xl font-bold" style="color: var(--accent-cyan);">12</div>
+                                    <div class="text-muted">Приглашено друзей</div>
+                                </div>
+                                <div class="card card-md text-center">
+                                    <div class="text-3xl font-bold text-success">150.00 USDT</div>
+                                    <div class="text-muted">Заработано</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Подраздел: Вывод средств -->
+                        <div id="ref-withdraw" class="ref-tab-content hidden">
+                            <div class="grid-2 mb-24">
+                                <div class="card card-md text-center">
+                                    <div class="text-3xl font-bold text-success">150.00 USDT</div>
+                                    <div class="text-muted">Доступно к выводу</div>
+                                </div>
+                                <div class="card card-md text-center">
+                                    <div class="text-3xl font-bold" style="color: var(--text-secondary);">320.50 USDT</div>
+                                    <div class="text-muted">Выведено за всё время</div>
+                                </div>
+                            </div>
+
+                            <div class="card card-md mb-24">
+                                <h3 class="mb-16">Заявка на вывод</h3>
+                                <form class="withdraw-form">
+                                    <div class="form-group">
+                                        <label class="form-label">Валюта</label>
+                                        <select class="form-select">
+                                            <option>USDT (Tether)</option>
+                                            <option>BTC (Bitcoin)</option>
+                                            <option>ETH (Ethereum)</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Сеть</label>
+                                        <select class="form-select">
+                                            <option>BEP20 (BNB Smart Chain)</option>
+                                            <option>ERC20 (Ethereum)</option>
+                                            <option>TRC20 (Tron)</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Сумма</label>
+                                        <input type="text" class="form-input" placeholder="0.00" value="150.00" inputmode="decimal">
+                                        <div class="form-hint">Доступно: 150.00 USDT</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Адрес кошелька <span style="color: var(--color-error);">*</span></label>
+                                        <input type="text" class="form-input" placeholder="Введите адрес кошелька">
+                                        <div class="form-hint">Убедитесь, что адрес соответствует выбранной сети</div>
+                                    </div>
+                                    <button type="button" class="btn btn-primary">Вывести средства</button>
+                                </form>
+                            </div>
+
+                            <!-- История выводов -->
+                            <div class="card card-md">
+                                <h4 class="mb-16">История выводов</h4>
+                                <div class="table-wrapper">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Дата</th>
+                                                <th>Сумма</th>
+                                                <th>Адрес</th>
+                                                <th>Статус</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>01.03.2026</td>
+                                                <td>120.00 USDT</td>
+                                                <td>TXqZ...8kNp</td>
+                                                <td><span class="status-badge status-success">Выполнен</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>15.02.2026</td>
+                                                <td>200.50 USDT</td>
+                                                <td>TXqZ...8kNp</td>
+                                                <td><span class="status-badge status-success">Выполнен</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Подраздел: Промоматериалы -->
+                        <div id="ref-promo" class="ref-tab-content hidden">
+                            <p class="text-muted mb-24">Используйте готовые баннеры для размещения на своих площадках. Нажмите «Копировать код», чтобы получить HTML-код баннера с вашей реферальной ссылкой.</p>
+
+                        <!-- Баннер 728x90 (Leaderboard) -->
+                        <div class="promo-banner-wrapper mb-24">
+                            <div class="promo-banner-header">
+                                <span class="promo-banner-size">728 &times; 90</span>
+                                <button class="btn btn-secondary btn-sm copy-banner-btn" data-banner="banner-leaderboard">Копировать код</button>
+                            </div>
+                            <div class="promo-banner-preview">
+                                <div id="banner-leaderboard" class="ref-banner ref-banner-leaderboard">
+                                    <div class="ref-banner-logo">
+                                        <svg width="90" height="32" viewBox="0 0 108.49 47.07" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill="#0086b1" fill-rule="evenodd" d="m97.01,15.53h8.18v26.36h-58.83v-2.35l-3.77,2.82,3.77,2.82v-2.35h59.77V14.59h-9.13v.94Z"/>
+                                            <path fill="#fff" fill-rule="evenodd" d="m3.28,7.14v10.2h11.7v3.37H3.28c-1.68,0-3.11-1.26-3.28-2.87V5.45c0-.93.76-1.69,1.68-1.69h13.38v3.37H3.28Zm1.84,6.77h9.94v-3.35H5.12v3.35Zm57.96,3.43V7.14h11.78v-3.37h-13.38c-.93,0-1.68.76-1.68,1.69v12.39c.17,1.6,1.6,2.87,3.28,2.87h11.7v-3.37h-11.7Zm1.99-3.32h9.54v-3.55h-9.54v3.55Zm31.05,6.53l-6.41-5.81s1.23,0,2.46-.08c1.14,0,2.9-.66,3.51-2.24.97-2.49.7-6.23-.61-7.48-.61-.58-1.14-1.08-2.81-1.08s-12.39-.08-12.39-.08c-.79,0-1.49.66-1.49,1.41v15.53h3.51V7.25h9.4c.79,0,1.41.58,1.41,1.33v1.74c0,.75-.61,1.33-1.41,1.33h-8.61v3.07h2.37l6.32,5.73,4.74.08ZM35.57,3.77v15.19c0,1-.74,1.75-1.73,1.75h-.91c-.5,0-.91-.17-1.24-.58l-9.66-10.52v11.1h-3.38V4.77c0-.58.41-1,.99-1h1.49c.58,0,1.07.25,1.49.67l9.58,10.85V3.77h3.38Zm20.45,3.42v-3.42h-16.94v3.42h6.74v13.52h3.46V7.19h6.74Z"/>
+                                            <path fill="#fff" d="m49.66,28.19v3.08c0,.24.17.4.51.4h4.73v1.29h-1.69v1.53h-1.01v-1.53h-.84v1.53h-1.01v-1.53h-.25c-1.01,0-1.77-.72-1.77-1.61v-3.25c0-.89.76-1.61,1.77-1.61h.25v-1.37h1.01v1.37h.68v-1.37h1.01v1.37h1.69v1.29h-4.73c-.27,0-.34.25-.34.41Zm13.71,4.76v-6.59h-1.29v2.6h-3.94v-2.6h-1.37v6.59h1.37v-2.6h3.94v2.6h1.29Zm16.94-6.59v5.94c0,.41-.33.65-.65.65h-.33c-.16,0-.41-.08-.49-.24l-3.82-4.07v4.31h-1.3v-6.18c0-.24.16-.41.41-.41h.57c.24,0,.41.08.57.24l3.74,4.23v-4.47h1.3Zm3.27,5.22v-3.94h5.17v-1.29h-5.84c-.42,0-.75.32-.75.64v4.82c.08.64.67,1.12,1.42,1.12h4.34c.5,0,.83-.32.83-.72v-2.49c0-.4-.42-.72-.83-.72h-4v1.29h3.34v1.29h-3.67Zm8.49-3.92v3.99h5.13v1.3h-5.13c-.73,0-1.37-.49-1.46-1.14v-4.8c0-.33.37-.65.73-.65h5.86v1.3h-5.13Zm.42,2.67h4.71v-1.35h-4.71v1.35Zm-27.24-.71c0-1.83,1.38-3.25,3.06-3.25h3.52v6.59h-1.15v-1.27h-4.21v1.27h-1.23v-3.33Zm1.23,0v.79h4.21v-2.78h-2.38c-1,0-1.84.87-1.84,1.98Z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="ref-banner-text">
+                                        <span class="ref-banner-title">Обмен криптовалюты</span>
+                                        <span class="ref-banner-subtitle">Лучшие курсы &bull; Быстро &bull; Безопасно</span>
+                                    </div>
+                                    <div class="ref-banner-cta">Обменять</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Баннер 300x250 (Medium Rectangle) -->
+                        <div class="promo-banner-wrapper mb-24">
+                            <div class="promo-banner-header">
+                                <span class="promo-banner-size">300 &times; 250</span>
+                                <button class="btn btn-secondary btn-sm copy-banner-btn" data-banner="banner-rectangle">Копировать код</button>
+                            </div>
+                            <div class="promo-banner-preview">
+                                <div id="banner-rectangle" class="ref-banner ref-banner-rectangle">
+                                    <div class="ref-banner-logo">
+                                        <svg width="100" height="36" viewBox="0 0 108.49 47.07" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill="#0086b1" fill-rule="evenodd" d="m97.01,15.53h8.18v26.36h-58.83v-2.35l-3.77,2.82,3.77,2.82v-2.35h59.77V14.59h-9.13v.94Z"/>
+                                            <path fill="#fff" fill-rule="evenodd" d="m3.28,7.14v10.2h11.7v3.37H3.28c-1.68,0-3.11-1.26-3.28-2.87V5.45c0-.93.76-1.69,1.68-1.69h13.38v3.37H3.28Zm1.84,6.77h9.94v-3.35H5.12v3.35Zm57.96,3.43V7.14h11.78v-3.37h-13.38c-.93,0-1.68.76-1.68,1.69v12.39c.17,1.6,1.6,2.87,3.28,2.87h11.7v-3.37h-11.7Zm1.99-3.32h9.54v-3.55h-9.54v3.55Zm31.05,6.53l-6.41-5.81s1.23,0,2.46-.08c1.14,0,2.9-.66,3.51-2.24.97-2.49.7-6.23-.61-7.48-.61-.58-1.14-1.08-2.81-1.08s-12.39-.08-12.39-.08c-.79,0-1.49.66-1.49,1.41v15.53h3.51V7.25h9.4c.79,0,1.41.58,1.41,1.33v1.74c0,.75-.61,1.33-1.41,1.33h-8.61v3.07h2.37l6.32,5.73,4.74.08ZM35.57,3.77v15.19c0,1-.74,1.75-1.73,1.75h-.91c-.5,0-.91-.17-1.24-.58l-9.66-10.52v11.1h-3.38V4.77c0-.58.41-1,.99-1h1.49c.58,0,1.07.25,1.49.67l9.58,10.85V3.77h3.38Zm20.45,3.42v-3.42h-16.94v3.42h6.74v13.52h3.46V7.19h6.74Z"/>
+                                            <path fill="#fff" d="m49.66,28.19v3.08c0,.24.17.4.51.4h4.73v1.29h-1.69v1.53h-1.01v-1.53h-.84v1.53h-1.01v-1.53h-.25c-1.01,0-1.77-.72-1.77-1.61v-3.25c0-.89.76-1.61,1.77-1.61h.25v-1.37h1.01v1.37h.68v-1.37h1.01v1.37h1.69v1.29h-4.73c-.27,0-.34.25-.34.41Zm13.71,4.76v-6.59h-1.29v2.6h-3.94v-2.6h-1.37v6.59h1.37v-2.6h3.94v2.6h1.29Zm16.94-6.59v5.94c0,.41-.33.65-.65.65h-.33c-.16,0-.41-.08-.49-.24l-3.82-4.07v4.31h-1.3v-6.18c0-.24.16-.41.41-.41h.57c.24,0,.41.08.57.24l3.74,4.23v-4.47h1.3Zm3.27,5.22v-3.94h5.17v-1.29h-5.84c-.42,0-.75.32-.75.64v4.82c.08.64.67,1.12,1.42,1.12h4.34c.5,0,.83-.32.83-.72v-2.49c0-.4-.42-.72-.83-.72h-4v1.29h3.34v1.29h-3.67Zm8.49-3.92v3.99h5.13v1.3h-5.13c-.73,0-1.37-.49-1.46-1.14v-4.8c0-.33.37-.65.73-.65h5.86v1.3h-5.13Zm.42,2.67h4.71v-1.35h-4.71v1.35Zm-27.24-.71c0-1.83,1.38-3.25,3.06-3.25h3.52v6.59h-1.15v-1.27h-4.21v1.27h-1.23v-3.33Zm1.23,0v.79h4.21v-2.78h-2.38c-1,0-1.84.87-1.84,1.98Z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="ref-banner-text">
+                                        <span class="ref-banner-headline">Обменяй крипту<br>по лучшему курсу</span>
+                                        <span class="ref-banner-desc">50+ валют &bull; Автоматический обмен<br>AML проверка &bull; Поддержка 24/7</span>
+                                    </div>
+                                    <div class="ref-banner-cta">Начать обмен</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Баннер 468x60 (Banner) -->
+                        <div class="promo-banner-wrapper mb-24">
+                            <div class="promo-banner-header">
+                                <span class="promo-banner-size">468 &times; 60</span>
+                                <button class="btn btn-secondary btn-sm copy-banner-btn" data-banner="banner-small">Копировать код</button>
+                            </div>
+                            <div class="promo-banner-preview">
+                                <div id="banner-small" class="ref-banner ref-banner-small">
+                                    <div class="ref-banner-logo">
+                                        <svg width="72" height="26" viewBox="0 0 108.49 47.07" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill="#0086b1" fill-rule="evenodd" d="m97.01,15.53h8.18v26.36h-58.83v-2.35l-3.77,2.82,3.77,2.82v-2.35h59.77V14.59h-9.13v.94Z"/>
+                                            <path fill="#fff" fill-rule="evenodd" d="m3.28,7.14v10.2h11.7v3.37H3.28c-1.68,0-3.11-1.26-3.28-2.87V5.45c0-.93.76-1.69,1.68-1.69h13.38v3.37H3.28Zm1.84,6.77h9.94v-3.35H5.12v3.35Zm57.96,3.43V7.14h11.78v-3.37h-13.38c-.93,0-1.68.76-1.68,1.69v12.39c.17,1.6,1.6,2.87,3.28,2.87h11.7v-3.37h-11.7Zm1.99-3.32h9.54v-3.55h-9.54v3.55Zm31.05,6.53l-6.41-5.81s1.23,0,2.46-.08c1.14,0,2.9-.66,3.51-2.24.97-2.49.7-6.23-.61-7.48-.61-.58-1.14-1.08-2.81-1.08s-12.39-.08-12.39-.08c-.79,0-1.49.66-1.49,1.41v15.53h3.51V7.25h9.4c.79,0,1.41.58,1.41,1.33v1.74c0,.75-.61,1.33-1.41,1.33h-8.61v3.07h2.37l6.32,5.73,4.74.08ZM35.57,3.77v15.19c0,1-.74,1.75-1.73,1.75h-.91c-.5,0-.91-.17-1.24-.58l-9.66-10.52v11.1h-3.38V4.77c0-.58.41-1,.99-1h1.49c.58,0,1.07.25,1.49.67l9.58,10.85V3.77h3.38Zm20.45,3.42v-3.42h-16.94v3.42h6.74v13.52h3.46V7.19h6.74Z"/>
+                                            <path fill="#fff" d="m49.66,28.19v3.08c0,.24.17.4.51.4h4.73v1.29h-1.69v1.53h-1.01v-1.53h-.84v1.53h-1.01v-1.53h-.25c-1.01,0-1.77-.72-1.77-1.61v-3.25c0-.89.76-1.61,1.77-1.61h.25v-1.37h1.01v1.37h.68v-1.37h1.01v1.37h1.69v1.29h-4.73c-.27,0-.34.25-.34.41Zm13.71,4.76v-6.59h-1.29v2.6h-3.94v-2.6h-1.37v6.59h1.37v-2.6h3.94v2.6h1.29Zm16.94-6.59v5.94c0,.41-.33.65-.65.65h-.33c-.16,0-.41-.08-.49-.24l-3.82-4.07v4.31h-1.3v-6.18c0-.24.16-.41.41-.41h.57c.24,0,.41.08.57.24l3.74,4.23v-4.47h1.3Zm3.27,5.22v-3.94h5.17v-1.29h-5.84c-.42,0-.75.32-.75.64v4.82c.08.64.67,1.12,1.42,1.12h4.34c.5,0,.83-.32.83-.72v-2.49c0-.4-.42-.72-.83-.72h-4v1.29h3.34v1.29h-3.67Zm8.49-3.92v3.99h5.13v1.3h-5.13c-.73,0-1.37-.49-1.46-1.14v-4.8c0-.33.37-.65.73-.65h5.86v1.3h-5.13Zm.42,2.67h4.71v-1.35h-4.71v1.35Zm-27.24-.71c0-1.83,1.38-3.25,3.06-3.25h3.52v6.59h-1.15v-1.27h-4.21v1.27h-1.23v-3.33Zm1.23,0v.79h4.21v-2.78h-2.38c-1,0-1.84.87-1.84,1.98Z"/>
+                                        </svg>
+                                    </div>
+                                    <span class="ref-banner-title">Обмен крипты &mdash; лучшие курсы</span>
+                                    <div class="ref-banner-cta">Обменять</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Баннер 160x600 (Skyscraper) -->
+                        <div class="promo-banner-wrapper mb-24">
+                            <div class="promo-banner-header">
+                                <span class="promo-banner-size">160 &times; 600</span>
+                                <button class="btn btn-secondary btn-sm copy-banner-btn" data-banner="banner-skyscraper">Копировать код</button>
+                            </div>
+                            <div class="promo-banner-preview">
+                                <div id="banner-skyscraper" class="ref-banner ref-banner-skyscraper">
+                                    <!-- Декоративные плавающие частицы -->
+                                    <div class="sky-particle sky-particle-1"></div>
+                                    <div class="sky-particle sky-particle-2"></div>
+                                    <div class="sky-particle sky-particle-3"></div>
+
+                                    <!-- Лого с пульсирующим кольцом -->
+                                    <div class="sky-logo-wrap">
+                                        <div class="sky-pulse-ring"></div>
+                                        <div class="ref-banner-logo">
+                                            <svg width="80" height="28" viewBox="0 0 108.49 47.07" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill="#0086b1" fill-rule="evenodd" d="m97.01,15.53h8.18v26.36h-58.83v-2.35l-3.77,2.82,3.77,2.82v-2.35h59.77V14.59h-9.13v.94Z"/>
+                                                <path fill="#fff" fill-rule="evenodd" d="m3.28,7.14v10.2h11.7v3.37H3.28c-1.68,0-3.11-1.26-3.28-2.87V5.45c0-.93.76-1.69,1.68-1.69h13.38v3.37H3.28Zm1.84,6.77h9.94v-3.35H5.12v3.35Zm57.96,3.43V7.14h11.78v-3.37h-13.38c-.93,0-1.68.76-1.68,1.69v12.39c.17,1.6,1.6,2.87,3.28,2.87h11.7v-3.37h-11.7Zm1.99-3.32h9.54v-3.55h-9.54v3.55Zm31.05,6.53l-6.41-5.81s1.23,0,2.46-.08c1.14,0,2.9-.66,3.51-2.24.97-2.49.7-6.23-.61-7.48-.61-.58-1.14-1.08-2.81-1.08s-12.39-.08-12.39-.08c-.79,0-1.49.66-1.49,1.41v15.53h3.51V7.25h9.4c.79,0,1.41.58,1.41,1.33v1.74c0,.75-.61,1.33-1.41,1.33h-8.61v3.07h2.37l6.32,5.73,4.74.08ZM35.57,3.77v15.19c0,1-.74,1.75-1.73,1.75h-.91c-.5,0-.91-.17-1.24-.58l-9.66-10.52v11.1h-3.38V4.77c0-.58.41-1,.99-1h1.49c.58,0,1.07.25,1.49.67l9.58,10.85V3.77h3.38Zm20.45,3.42v-3.42h-16.94v3.42h6.74v13.52h3.46V7.19h6.74Z"/>
+                                                <path fill="#fff" d="m49.66,28.19v3.08c0,.24.17.4.51.4h4.73v1.29h-1.69v1.53h-1.01v-1.53h-.84v1.53h-1.01v-1.53h-.25c-1.01,0-1.77-.72-1.77-1.61v-3.25c0-.89.76-1.61,1.77-1.61h.25v-1.37h1.01v1.37h.68v-1.37h1.01v1.37h1.69v1.29h-4.73c-.27,0-.34.25-.34.41Zm13.71,4.76v-6.59h-1.29v2.6h-3.94v-2.6h-1.37v6.59h1.37v-2.6h3.94v2.6h1.29Zm16.94-6.59v5.94c0,.41-.33.65-.65.65h-.33c-.16,0-.41-.08-.49-.24l-3.82-4.07v4.31h-1.3v-6.18c0-.24.16-.41.41-.41h.57c.24,0,.41.08.57.24l3.74,4.23v-4.47h1.3Zm3.27,5.22v-3.94h5.17v-1.29h-5.84c-.42,0-.75.32-.75.64v4.82c.08.64.67,1.12,1.42,1.12h4.34c.5,0,.83-.32.83-.72v-2.49c0-.4-.42-.72-.83-.72h-4v1.29h3.34v1.29h-3.67Zm8.49-3.92v3.99h5.13v1.3h-5.13c-.73,0-1.37-.49-1.46-1.14v-4.8c0-.33.37-.65.73-.65h5.86v1.3h-5.13Zm.42,2.67h4.71v-1.35h-4.71v1.35Zm-27.24-.71c0-1.83,1.38-3.25,3.06-3.25h3.52v6.59h-1.15v-1.27h-4.21v1.27h-1.23v-3.33Zm1.23,0v.79h4.21v-2.78h-2.38c-1,0-1.84.87-1.84,1.98Z"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                    <!-- Заголовок -->
+                                    <div class="ref-banner-text">
+                                        <span class="ref-banner-headline">Обмен<br>криптовалюты</span>
+                                    </div>
+
+                                    <div class="ref-banner-divider"></div>
+
+                                    <!-- Крупные статы -->
+                                    <div class="sky-stats">
+                                        <div class="sky-stat">
+                                            <span class="sky-stat-value">50+</span>
+                                            <span class="sky-stat-label">валют</span>
+                                        </div>
+                                        <div class="sky-stat">
+                                            <span class="sky-stat-value">&lt;15</span>
+                                            <span class="sky-stat-label">минут</span>
+                                        </div>
+                                        <div class="sky-stat">
+                                            <span class="sky-stat-value">24/7</span>
+                                            <span class="sky-stat-label">онлайн</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="ref-banner-divider"></div>
+
+                                    <!-- Фичи -->
+                                    <div class="ref-banner-features">
+                                        <div class="ref-banner-feature">
+                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#33E7FF" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                                            <span>Лучшие курсы</span>
+                                        </div>
+                                        <div class="ref-banner-feature">
+                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#33E7FF" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                                            <span>AML проверка</span>
+                                        </div>
+                                        <div class="ref-banner-feature">
+                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#33E7FF" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                                            <span>Автоматически</span>
+                                        </div>
+                                        <div class="ref-banner-feature">
+                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#33E7FF" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                                            <span>Без комиссий</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="ref-banner-divider"></div>
+
+                                    <!-- Бегущая строка курсов -->
+                                    <div class="sky-ticker">
+                                        <div class="sky-ticker-track">
+                                            <span>BTC/USDT</span>
+                                            <span class="sky-ticker-dot"></span>
+                                            <span>ETH/USDT</span>
+                                            <span class="sky-ticker-dot"></span>
+                                            <span>BNB/USDT</span>
+                                            <span class="sky-ticker-dot"></span>
+                                            <span>SOL/USDT</span>
+                                            <span class="sky-ticker-dot"></span>
+                                            <span>BTC/USDT</span>
+                                            <span class="sky-ticker-dot"></span>
+                                            <span>ETH/USDT</span>
+                                            <span class="sky-ticker-dot"></span>
+                                        </div>
+                                    </div>
+
+                                    <!-- CTA -->
+                                    <div class="ref-banner-cta">Обменять</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Текстовая ссылка -->
+                        <div class="promo-banner-wrapper mb-24">
+                            <div class="promo-banner-header">
+                                <span class="promo-banner-size">Текстовая ссылка</span>
+                                <button class="btn btn-secondary btn-sm copy-banner-btn" data-banner="banner-textlink">Копировать код</button>
+                            </div>
+                            <div class="promo-banner-preview" style="padding: 24px;">
+                                <div id="banner-textlink">
+                                    <a href="https://enter-change.com/ref/USER847291" style="color: #0086B1; text-decoration: underline; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 15px;">Enter-Change &mdash; обмен криптовалюты по лучшим курсам. 50+ валют, автоматический обмен, AML проверка.</a>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- AML проверки -->
+                    <div id="aml-checks" class="dashboard-section hidden">
+                        <h2 class="mb-24">AML проверки</h2>
+
+                        <!-- Баланс проверок -->
+                        <div class="aml-balance-card">
+                            <div class="aml-balance-info">
+                                <div class="aml-balance-icon">
+                                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                                        <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="currentColor" stroke-width="2"/>
+                                        <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <div class="aml-balance-text">
+                                    <div class="aml-balance-label">Доступно проверок</div>
+                                    <div class="aml-balance-value">7</div>
+                                </div>
+                            </div>
+                            <a href="aml-check-payment.html" class="btn btn-primary">Купить проверки</a>
+                        </div>
+
+                        <!-- Форма проверки -->
+                        <div class="card card-md" style="margin-top: 24px;">
+                            <!-- Переключатель типа проверки -->
+                            <div class="aml-check-toggle">
+                                <button class="aml-check-toggle-btn active" data-type="address">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="currentColor" stroke-width="2"/>
+                                        <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                    Проверить адрес
+                                </button>
+                                <button class="aml-check-toggle-btn" data-type="transaction">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M16 3H8C6.89543 3 6 3.89543 6 5V19C6 20.1046 6.89543 21 8 21H16C17.1046 21 18 20.1046 18 19V5C18 3.89543 17.1046 3 16 3Z" stroke="currentColor" stroke-width="2"/>
+                                        <path d="M9 7H15M9 11H15M9 15H12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    </svg>
+                                    Проверить транзакцию
+                                </button>
+                            </div>
+
+                            <form>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label class="form-label">Сеть</label>
+                                        <select class="form-select" id="dash-aml-network">
+                                            <option value="bitcoin">Bitcoin</option>
+                                            <option value="ethereum">Ethereum (ERC-20)</option>
+                                            <option value="tron">Tron (TRC-20)</option>
+                                            <option value="bsc">BNB Smart Chain (BEP-20)</option>
+                                            <option value="litecoin">Litecoin</option>
+                                            <option value="solana">Solana</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Валюта</label>
+                                        <select class="form-select" id="dash-aml-currency">
+                                            <option value="btc">BTC</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Поле для адреса -->
+                                <div class="form-group aml-field-address">
+                                    <label class="form-label">Адрес кошелька</label>
+                                    <input type="text" class="form-input" placeholder="Введите адрес кошелька для проверки">
+                                </div>
+
+                                <!-- Поле для транзакции -->
+                                <div class="form-group aml-field-transaction" style="display: none;">
+                                    <label class="form-label">Хеш транзакции</label>
+                                    <input type="text" class="form-input" placeholder="Введите хеш транзакции (TXID)">
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">Проверить</button>
+                            </form>
+                        </div>
+
+                        <!-- История проверок -->
+                        <div style="margin-top: 24px;">
+                            <h3 class="mb-16">История проверок</h3>
+                            <div class="table-wrapper">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Дата</th>
+                                            <th>Адрес</th>
+                                            <th>Валюта</th>
+                                            <th>Risk Score</th>
+                                            <th>Результат</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>19.03.2026, 14:25</td>
+                                            <td class="aml-address">bc1qxy2kgd...m7vl3q</td>
+                                            <td>BTC</td>
+                                            <td><span class="risk-score-badge risk-score-low">12</span></td>
+                                            <td><span class="status-badge status-success">Чистый</span></td>
+                                            <td><a href="aml-check-result.html" class="aml-details-btn">Подробнее</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>17.03.2026, 09:10</td>
+                                            <td class="aml-address">0x742d35Cc...F44e3B</td>
+                                            <td>ETH</td>
+                                            <td><span class="risk-score-badge risk-score-low">8</span></td>
+                                            <td><span class="status-badge status-success">Чистый</span></td>
+                                            <td><a href="aml-check-result.html" class="aml-details-btn">Подробнее</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>15.03.2026, 18:38</td>
+                                            <td class="aml-address">TJYs28NM...p1Vhkf</td>
+                                            <td>USDT</td>
+                                            <td><span class="risk-score-badge risk-score-medium">45</span></td>
+                                            <td><span class="status-badge status-warning">Средний риск</span></td>
+                                            <td><a href="aml-check-result.html" class="aml-details-btn">Подробнее</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>12.03.2026, 11:15</td>
+                                            <td class="aml-address">bc1qw508d...0wpjn9</td>
+                                            <td>BTC</td>
+                                            <td><span class="risk-score-badge risk-score-high">78</span></td>
+                                            <td><span class="status-badge status-error">Высокий риск</span></td>
+                                            <td><a href="aml-check-result.html" class="aml-details-btn">Подробнее</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>08.03.2026, 16:50</td>
+                                            <td class="aml-address">0x5aAeb6...b8dBa2</td>
+                                            <td>ETH</td>
+                                            <td><span class="risk-score-badge risk-score-low">5</span></td>
+                                            <td><span class="status-badge status-success">Чистый</span></td>
+                                            <td><a href="aml-check-result.html" class="aml-details-btn">Подробнее</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Настройки -->
+                    <div id="settings" class="dashboard-section hidden">
+                        <h2 class="mb-24">Настройки</h2>
+
+                        <div class="card card-md">
+                            <form>
+                                <div class="form-group">
+                                    <label class="form-label">Email</label>
+                                    <input type="email" class="form-input" value="user@example.com">
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Telegram</label>
+                                    <input type="text" class="form-input" placeholder="@username">
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Текущий пароль</label>
+                                    <input type="password" class="form-input" placeholder="Введите текущий пароль">
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Новый пароль</label>
+                                    <input type="password" class="form-input" placeholder="Введите новый пароль">
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Подтвердите новый пароль</label>
+                                    <input type="password" class="form-input" placeholder="Повторите новый пароль">
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">Сохранить изменения</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <a href="index.html">
+                            <svg width="100" height="36" viewBox="0 0 108.49 47.07" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="#0086b1" fill-rule="evenodd" d="m97.01,15.53h8.18v26.36h-58.83v-2.35l-3.77,2.82,3.77,2.82v-2.35h59.77V14.59h-9.13v.94Z"/>
+                                <path fill="#fff" fill-rule="evenodd" d="m3.28,7.14v10.2h11.7v3.37H3.28c-1.68,0-3.11-1.26-3.28-2.87V5.45c0-.93.76-1.69,1.68-1.69h13.38v3.37H3.28Zm1.84,6.77h9.94v-3.35H5.12v3.35Zm57.96,3.43V7.14h11.78v-3.37h-13.38c-.93,0-1.68.76-1.68,1.69v12.39c.17,1.6,1.6,2.87,3.28,2.87h11.7v-3.37h-11.7Zm1.99-3.32h9.54v-3.55h-9.54v3.55Zm31.05,6.53l-6.41-5.81s1.23,0,2.46-.08c1.14,0,2.9-.66,3.51-2.24.97-2.49.7-6.23-.61-7.48-.61-.58-1.14-1.08-2.81-1.08s-12.39-.08-12.39-.08c-.79,0-1.49.66-1.49,1.41v15.53h3.51V7.25h9.4c.79,0,1.41.58,1.41,1.33v1.74c0,.75-.61,1.33-1.41,1.33h-8.61v3.07h2.37l6.32,5.73,4.74.08ZM35.57,3.77v15.19c0,1-.74,1.75-1.73,1.75h-.91c-.5,0-.91-.17-1.24-.58l-9.66-10.52v11.1h-3.38V4.77c0-.58.41-1,.99-1h1.49c.58,0,1.07.25,1.49.67l9.58,10.85V3.77h3.38Zm20.45,3.42v-3.42h-16.94v3.42h6.74v13.52h3.46V7.19h6.74Z"/>
+                                <path fill="#fff" d="m49.66,28.19v3.08c0,.24.17.4.51.4h4.73v1.29h-1.69v1.53h-1.01v-1.53h-.84v1.53h-1.01v-1.53h-.25c-1.01,0-1.77-.72-1.77-1.61v-3.25c0-.89.76-1.61,1.77-1.61h.25v-1.37h1.01v1.37h.68v-1.37h1.01v1.37h1.69v1.29h-4.73c-.27,0-.34.25-.34.41Zm13.71,4.76v-6.59h-1.29v2.6h-3.94v-2.6h-1.37v6.59h1.37v-2.6h3.94v2.6h1.29Zm16.94-6.59v5.94c0,.41-.33.65-.65.65h-.33c-.16,0-.41-.08-.49-.24l-3.82-4.07v4.31h-1.3v-6.18c0-.24.16-.41.41-.41h.57c.24,0,.41.08.57.24l3.74,4.23v-4.47h1.3Zm3.27,5.22v-3.94h5.17v-1.29h-5.84c-.42,0-.75.32-.75.64v4.82c.08.64.67,1.12,1.42,1.12h4.34c.5,0,.83-.32.83-.72v-2.49c0-.4-.42-.72-.83-.72h-4v1.29h3.34v1.29h-3.67Zm8.49-3.92v3.99h5.13v1.3h-5.13c-.73,0-1.37-.49-1.46-1.14v-4.8c0-.33.37-.65.73-.65h5.86v1.3h-5.13Zm.42,2.67h4.71v-1.35h-4.71v1.35Zm-27.24-.71c0-1.83,1.38-3.25,3.06-3.25h3.52v6.59h-1.15v-1.27h-4.21v1.27h-1.23v-3.33Zm1.23,0v.79h4.21v-2.78h-2.38c-1,0-1.84.87-1.84,1.98Z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <p>Enter Change &mdash; ваш надёжный партнёр в мире цифровых валют с 2020 года.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Сервис</h4>
+                    <div class="footer-links">
+                        <a href="index.html" class="footer-link">Обмен крипты</a>
+                        <a href="index-fiat.html" class="footer-link">Обмен за фиат</a>
+                        <a href="index-cash.html" class="footer-link">Обмен за наличные</a>
+                        <a href="index-dex.html" class="footer-link">DEX обмен</a>
+                        <a href="aml-check.html" class="footer-link">AML проверка</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Информация</h4>
+                    <div class="footer-links">
+                        <a href="about.html" class="footer-link">О нас</a>
+                        <a href="faq.html" class="footer-link">FAQ</a>
+                        <a href="blog.html" class="footer-link">Блог</a>
+                        <a href="contacts.html" class="footer-link">Контакты</a>
+                        <a href="referral.html" class="footer-link">Реферальная программа</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Документы</h4>
+                    <div class="footer-links">
+                        <a href="terms.html" class="footer-link">Правила использования</a>
+                        <a href="aml.html" class="footer-link">AML регламент</a>
+                        <a href="privacy.html" class="footer-link">Политика конфиденциальности</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span class="footer-copyright">&copy; 2020&ndash;2026 Enter-Change. Все права защищены.</span>
+                <div class="footer-socials">
+                    <a href="#" class="footer-social" aria-label="Telegram">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.461-1.901-.903-1.056-.693-1.653-1.124-2.678-1.8-1.185-.781-.417-1.21.258-1.911.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.139-5.062 3.345-.479.329-.913.489-1.302.481-.428-.009-1.252-.242-1.865-.44-.752-.244-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.831-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635.099-.002.321.023.465.141.12.098.153.229.168.327.016.098.036.322.02.496z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="footer-social" aria-label="Email">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="4" width="20" height="16" rx="2"/>
+                            <path d="M22 7L13.03 12.7a1.94 1.94 0 01-2.06 0L2 7"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Скрипт для переключения секций дашборда -->
+    <script>
+        function showSection(sectionId, clickedLink) {
+            document.querySelectorAll('.dashboard-section').forEach(function(section) {
+                section.classList.add('hidden');
+                section.style.display = '';
+            });
+            var target = document.getElementById(sectionId);
+            target.classList.remove('hidden');
+            target.style.display = 'block';
+            document.querySelectorAll('.sidebar-link').forEach(function(link) {
+                link.classList.remove('active');
+            });
+            clickedLink.classList.add('active');
+            event.preventDefault();
+        }
+
+        // Переключение подразделов реферальной программы
+        function showRefTab(tabId, clickedTab) {
+            document.querySelectorAll('.ref-tab-content').forEach(function(panel) {
+                panel.classList.add('hidden');
+            });
+            document.getElementById(tabId).classList.remove('hidden');
+            document.querySelectorAll('.ref-tab').forEach(function(tab) {
+                tab.classList.remove('active');
+            });
+            clickedTab.classList.add('active');
+        }
+
+        // Self-contained CSS для экспортируемых баннеров
+        var bannerCSS = '<style>' +
+            '@keyframes ecGradient{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}' +
+            '@keyframes ecShimmer{0%{left:-100%}100%{left:100%}}' +
+            '@keyframes ecFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}' +
+            '.ec-banner{position:relative;background:linear-gradient(-45deg,#00243E,#053558,#0a3d6b,#033152);background-size:300% 300%;animation:ecGradient 8s ease infinite;border:1px solid rgba(51,231,255,0.2);border-radius:12px;display:flex;align-items:center;font-family:Manrope,-apple-system,BlinkMacSystemFont,\'Segoe UI\',Roboto,sans-serif;box-sizing:border-box;overflow:hidden;transition:transform .4s cubic-bezier(.16,1,.3,1),box-shadow .4s cubic-bezier(.16,1,.3,1),border-color .4s;cursor:pointer;text-decoration:none}' +
+            '.ec-banner:hover{transform:translateY(-3px) scale(1.01);border-color:rgba(51,231,255,0.45);box-shadow:0 8px 32px rgba(0,134,177,0.25),0 0 48px rgba(51,231,255,0.08)}' +
+            '.ec-banner::before{content:\'\';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(51,231,255,0.06) 0%,transparent 60%);pointer-events:none;opacity:.5;transition:opacity .4s}' +
+            '.ec-banner:hover::before{opacity:1}' +
+            '.ec-banner::after{content:\'\';position:absolute;bottom:0;left:10%;width:80%;height:1px;background:linear-gradient(90deg,transparent,rgba(51,231,255,0.4),transparent);opacity:0;transition:opacity .4s}' +
+            '.ec-banner:hover::after{opacity:1}' +
+            '.ec-logo{flex-shrink:0;display:flex;align-items:center;animation:ecFloat 4s ease-in-out infinite}' +
+            '.ec-text{display:flex;flex-direction:column;gap:4px;flex:1;min-width:0}' +
+            '.ec-title{color:#fff;font-weight:600;white-space:nowrap}' +
+            '.ec-sub{color:#B2DDEF;white-space:nowrap}' +
+            '.ec-head{color:#fff;font-weight:700;line-height:1.2}' +
+            '.ec-desc{color:#B2DDEF;line-height:1.4}' +
+            '.ec-cta{position:relative;background:linear-gradient(135deg,#0086B1,#00a3d9);color:#fff;font-weight:600;border-radius:40px;text-align:center;white-space:nowrap;flex-shrink:0;cursor:pointer;overflow:hidden;transition:transform .3s,box-shadow .3s;box-shadow:0 2px 12px rgba(0,134,177,0.3)}' +
+            '.ec-cta::after{content:\'\';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(120deg,transparent 0%,rgba(255,255,255,0.25) 50%,transparent 100%);animation:ecShimmer 3s ease-in-out infinite}' +
+            '.ec-banner:hover .ec-cta{transform:scale(1.05);box-shadow:0 4px 20px rgba(0,134,177,0.5),0 0 24px rgba(51,231,255,0.15)}' +
+            '.ec-features{display:flex;flex-direction:column;gap:10px;width:100%;padding:0 2px}' +
+            '.ec-feature{display:flex;align-items:center;gap:6px;color:#B2DDEF;font-size:11px;font-weight:500}' +
+            '.ec-divider{width:60%;height:1px;background:linear-gradient(90deg,transparent,rgba(51,231,255,0.25),transparent);align-self:center}' +
+            '@keyframes ecPulse{0%,100%{transform:scale(1);opacity:.4}50%{transform:scale(1.35);opacity:0}}' +
+            '@keyframes ecStatPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}' +
+            '@keyframes ecTicker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}' +
+            '.ec-logo-wrap{position:relative;display:flex;align-items:center;justify-content:center}' +
+            '.ec-pulse{position:absolute;width:72px;height:72px;border-radius:50%;border:1px solid rgba(51,231,255,0.15);animation:ecPulse 3s ease-in-out infinite}' +
+            '.ec-stats{display:flex;flex-direction:column;gap:14px;width:100%;align-items:center}' +
+            '.ec-stat{display:flex;flex-direction:column;align-items:center;gap:2px;animation:ecStatPulse 4s ease-in-out infinite}' +
+            '.ec-stat:nth-child(2){animation-delay:1.3s}.ec-stat:nth-child(3){animation-delay:2.6s}' +
+            '.ec-stat-val{color:#33E7FF;font-size:26px;font-weight:800;line-height:1;letter-spacing:-.5px}' +
+            '.ec-stat-lbl{color:#7CCAEC;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.08em}' +
+            '.ec-ticker{width:100%;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 15%,#000 85%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0%,#000 15%,#000 85%,transparent 100%)}' +
+            '.ec-ticker-track{display:flex;gap:8px;white-space:nowrap;animation:ecTicker 12s linear infinite;color:#5BA8C8;font-size:10px;font-weight:600}' +
+            '.ec-ticker-dot{width:3px;height:3px;border-radius:50%;background:rgba(51,231,255,0.35);align-self:center;flex-shrink:0}' +
+            '</style>';
+
+        // Маппинг размерных стилей для экспорта
+        var bannerSizes = {
+            'banner-leaderboard': 'width:728px;height:90px;padding:0 24px;gap:20px',
+            'banner-rectangle': 'width:300px;height:250px;padding:24px;flex-direction:column;justify-content:space-between;text-align:center',
+            'banner-small': 'width:468px;height:60px;padding:0 16px;gap:12px',
+            'banner-skyscraper': 'width:160px;height:600px;padding:28px 14px;flex-direction:column;justify-content:space-between;align-items:center;text-align:center'
+        };
+
+        // Маппинг содержимого баннеров для экспорта
+        var bannerContent = {
+            'banner-leaderboard': '<div class="ec-logo"><svg width="90" height="32" viewBox="0 0 108.49 47.07" xmlns="http://www.w3.org/2000/svg"><path fill="#0086b1" fill-rule="evenodd" d="m97.01,15.53h8.18v26.36h-58.83v-2.35l-3.77,2.82,3.77,2.82v-2.35h59.77V14.59h-9.13v.94Z"/><path fill="#fff" fill-rule="evenodd" d="m3.28,7.14v10.2h11.7v3.37H3.28c-1.68,0-3.11-1.26-3.28-2.87V5.45c0-.93.76-1.69,1.68-1.69h13.38v3.37H3.28Zm1.84,6.77h9.94v-3.35H5.12v3.35Zm57.96,3.43V7.14h11.78v-3.37h-13.38c-.93,0-1.68.76-1.68,1.69v12.39c.17,1.6,1.6,2.87,3.28,2.87h11.7v-3.37h-11.7Zm1.99-3.32h9.54v-3.55h-9.54v3.55Zm31.05,6.53l-6.41-5.81s1.23,0,2.46-.08c1.14,0,2.9-.66,3.51-2.24.97-2.49.7-6.23-.61-7.48-.61-.58-1.14-1.08-2.81-1.08s-12.39-.08-12.39-.08c-.79,0-1.49.66-1.49,1.41v15.53h3.51V7.25h9.4c.79,0,1.41.58,1.41,1.33v1.74c0,.75-.61,1.33-1.41,1.33h-8.61v3.07h2.37l6.32,5.73,4.74.08ZM35.57,3.77v15.19c0,1-.74,1.75-1.73,1.75h-.91c-.5,0-.91-.17-1.24-.58l-9.66-10.52v11.1h-3.38V4.77c0-.58.41-1,.99-1h1.49c.58,0,1.07.25,1.49.67l9.58,10.85V3.77h3.38Zm20.45,3.42v-3.42h-16.94v3.42h6.74v13.52h3.46V7.19h6.74Z"/></svg></div><div class="ec-text"><span class="ec-title" style="font-size:18px">Обмен криптовалюты</span><span class="ec-sub" style="font-size:13px">Лучшие курсы &bull; Быстро &bull; Безопасно</span></div><div class="ec-cta" style="padding:10px 24px;font-size:14px">Обменять</div>',
+            'banner-rectangle': '<div class="ec-logo"><svg width="100" height="36" viewBox="0 0 108.49 47.07" xmlns="http://www.w3.org/2000/svg"><path fill="#0086b1" fill-rule="evenodd" d="m97.01,15.53h8.18v26.36h-58.83v-2.35l-3.77,2.82,3.77,2.82v-2.35h59.77V14.59h-9.13v.94Z"/><path fill="#fff" fill-rule="evenodd" d="m3.28,7.14v10.2h11.7v3.37H3.28c-1.68,0-3.11-1.26-3.28-2.87V5.45c0-.93.76-1.69,1.68-1.69h13.38v3.37H3.28Zm1.84,6.77h9.94v-3.35H5.12v3.35Zm57.96,3.43V7.14h11.78v-3.37h-13.38c-.93,0-1.68.76-1.68,1.69v12.39c.17,1.6,1.6,2.87,3.28,2.87h11.7v-3.37h-11.7Zm1.99-3.32h9.54v-3.55h-9.54v3.55Zm31.05,6.53l-6.41-5.81s1.23,0,2.46-.08c1.14,0,2.9-.66,3.51-2.24.97-2.49.7-6.23-.61-7.48-.61-.58-1.14-1.08-2.81-1.08s-12.39-.08-12.39-.08c-.79,0-1.49.66-1.49,1.41v15.53h3.51V7.25h9.4c.79,0,1.41.58,1.41,1.33v1.74c0,.75-.61,1.33-1.41,1.33h-8.61v3.07h2.37l6.32,5.73,4.74.08ZM35.57,3.77v15.19c0,1-.74,1.75-1.73,1.75h-.91c-.5,0-.91-.17-1.24-.58l-9.66-10.52v11.1h-3.38V4.77c0-.58.41-1,.99-1h1.49c.58,0,1.07.25,1.49.67l9.58,10.85V3.77h3.38Zm20.45,3.42v-3.42h-16.94v3.42h6.74v13.52h3.46V7.19h6.74Z"/></svg></div><div class="ec-text" style="align-items:center;gap:8px"><span class="ec-head" style="font-size:22px">Обменяй крипту<br>по лучшему курсу</span><span class="ec-desc" style="font-size:12px">50+ валют &bull; Автоматический обмен<br>AML проверка &bull; Поддержка 24/7</span></div><div class="ec-cta" style="padding:10px 32px;font-size:14px">Начать обмен</div>',
+            'banner-small': '<div class="ec-logo" style="animation:none"><svg width="72" height="26" viewBox="0 0 108.49 47.07" xmlns="http://www.w3.org/2000/svg"><path fill="#0086b1" fill-rule="evenodd" d="m97.01,15.53h8.18v26.36h-58.83v-2.35l-3.77,2.82,3.77,2.82v-2.35h59.77V14.59h-9.13v.94Z"/><path fill="#fff" fill-rule="evenodd" d="m3.28,7.14v10.2h11.7v3.37H3.28c-1.68,0-3.11-1.26-3.28-2.87V5.45c0-.93.76-1.69,1.68-1.69h13.38v3.37H3.28Zm1.84,6.77h9.94v-3.35H5.12v3.35Zm57.96,3.43V7.14h11.78v-3.37h-13.38c-.93,0-1.68.76-1.68,1.69v12.39c.17,1.6,1.6,2.87,3.28,2.87h11.7v-3.37h-11.7Zm1.99-3.32h9.54v-3.55h-9.54v3.55Zm31.05,6.53l-6.41-5.81s1.23,0,2.46-.08c1.14,0,2.9-.66,3.51-2.24.97-2.49.7-6.23-.61-7.48-.61-.58-1.14-1.08-2.81-1.08s-12.39-.08-12.39-.08c-.79,0-1.49.66-1.49,1.41v15.53h3.51V7.25h9.4c.79,0,1.41.58,1.41,1.33v1.74c0,.75-.61,1.33-1.41,1.33h-8.61v3.07h2.37l6.32,5.73,4.74.08ZM35.57,3.77v15.19c0,1-.74,1.75-1.73,1.75h-.91c-.5,0-.91-.17-1.24-.58l-9.66-10.52v11.1h-3.38V4.77c0-.58.41-1,.99-1h1.49c.58,0,1.07.25,1.49.67l9.58,10.85V3.77h3.38Zm20.45,3.42v-3.42h-16.94v3.42h6.74v13.52h3.46V7.19h6.74Z"/></svg></div><span class="ec-title" style="font-size:14px">Обмен крипты &mdash; лучшие курсы</span><div class="ec-cta" style="padding:8px 18px;font-size:12px">Обменять</div>',
+            'banner-skyscraper': '<div class="ec-logo-wrap"><div class="ec-pulse"></div><div class="ec-logo"><svg width="80" height="28" viewBox="0 0 108.49 47.07" xmlns="http://www.w3.org/2000/svg"><path fill="#0086b1" fill-rule="evenodd" d="m97.01,15.53h8.18v26.36h-58.83v-2.35l-3.77,2.82,3.77,2.82v-2.35h59.77V14.59h-9.13v.94Z"/><path fill="#fff" fill-rule="evenodd" d="m3.28,7.14v10.2h11.7v3.37H3.28c-1.68,0-3.11-1.26-3.28-2.87V5.45c0-.93.76-1.69,1.68-1.69h13.38v3.37H3.28Zm1.84,6.77h9.94v-3.35H5.12v3.35Zm57.96,3.43V7.14h11.78v-3.37h-13.38c-.93,0-1.68.76-1.68,1.69v12.39c.17,1.6,1.6,2.87,3.28,2.87h11.7v-3.37h-11.7Zm1.99-3.32h9.54v-3.55h-9.54v3.55Zm31.05,6.53l-6.41-5.81s1.23,0,2.46-.08c1.14,0,2.9-.66,3.51-2.24.97-2.49.7-6.23-.61-7.48-.61-.58-1.14-1.08-2.81-1.08s-12.39-.08-12.39-.08c-.79,0-1.49.66-1.49,1.41v15.53h3.51V7.25h9.4c.79,0,1.41.58,1.41,1.33v1.74c0,.75-.61,1.33-1.41,1.33h-8.61v3.07h2.37l6.32,5.73,4.74.08ZM35.57,3.77v15.19c0,1-.74,1.75-1.73,1.75h-.91c-.5,0-.91-.17-1.24-.58l-9.66-10.52v11.1h-3.38V4.77c0-.58.41-1,.99-1h1.49c.58,0,1.07.25,1.49.67l9.58,10.85V3.77h3.38Zm20.45,3.42v-3.42h-16.94v3.42h6.74v13.52h3.46V7.19h6.74Z"/></svg></div></div><div class="ec-text" style="align-items:center;gap:8px;flex:none"><span class="ec-head" style="font-size:17px">Обмен<br>криптовалюты</span></div><div class="ec-divider"></div><div class="ec-stats"><div class="ec-stat"><span class="ec-stat-val">50+</span><span class="ec-stat-lbl">валют</span></div><div class="ec-stat"><span class="ec-stat-val">&lt;15</span><span class="ec-stat-lbl">минут</span></div><div class="ec-stat"><span class="ec-stat-val">24/7</span><span class="ec-stat-lbl">онлайн</span></div></div><div class="ec-divider"></div><div class="ec-features"><div class="ec-feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#33E7FF" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Лучшие курсы</span></div><div class="ec-feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#33E7FF" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>AML проверка</span></div><div class="ec-feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#33E7FF" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Автоматически</span></div><div class="ec-feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#33E7FF" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Без комиссий</span></div></div><div class="ec-divider"></div><div class="ec-ticker"><div class="ec-ticker-track"><span>BTC/USDT</span><span class="ec-ticker-dot"></span><span>ETH/USDT</span><span class="ec-ticker-dot"></span><span>BNB/USDT</span><span class="ec-ticker-dot"></span><span>SOL/USDT</span><span class="ec-ticker-dot"></span><span>BTC/USDT</span><span class="ec-ticker-dot"></span><span>ETH/USDT</span><span class="ec-ticker-dot"></span></div></div><div class="ec-cta" style="padding:10px 24px;font-size:13px;width:100%">Обменять</div>'
+        };
+
+        // Копирование HTML-кода баннеров
+        document.querySelectorAll('.copy-banner-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var bannerId = this.getAttribute('data-banner');
+                var refLink = 'https://enter-change.com/ref/USER847291';
+                var code;
+
+                if (bannerId === 'banner-textlink') {
+                    code = '<a href="' + refLink + '" target="_blank" style="color:#0086B1;text-decoration:underline;font-family:-apple-system,BlinkMacSystemFont,\'Segoe UI\',Roboto,sans-serif;font-size:15px;">Enter-Change — обмен криптовалюты по лучшим курсам. 50+ валют, автоматический обмен, AML проверка.</a>';
+                } else {
+                    var sizeStyle = bannerSizes[bannerId] || '';
+                    var content = bannerContent[bannerId] || '';
+                    code = bannerCSS +
+                        '<a href="' + refLink + '" target="_blank" class="ec-banner" style="' + sizeStyle + ';text-decoration:none">' +
+                        content + '</a>';
+                }
+
+                navigator.clipboard.writeText(code).then(function() {
+                    var originalText = btn.textContent;
+                    btn.textContent = 'Скопировано!';
+                    btn.style.color = 'var(--color-success)';
+                    setTimeout(function() {
+                        btn.textContent = originalText;
+                        btn.style.color = '';
+                    }, 2000);
+                });
+            });
+        });
+        // AML — динамическая смена валют при выборе сети
+        var amlNetworkCurrencies = {
+            bitcoin: [{ value: 'btc', label: 'BTC' }],
+            ethereum: [
+                { value: 'eth', label: 'ETH' },
+                { value: 'usdt-erc20', label: 'USDT' },
+                { value: 'usdc', label: 'USDC' },
+                { value: 'dai', label: 'DAI' }
+            ],
+            tron: [
+                { value: 'trx', label: 'TRX' },
+                { value: 'usdt-trc20', label: 'USDT' }
+            ],
+            bsc: [
+                { value: 'bnb', label: 'BNB' },
+                { value: 'usdt-bep20', label: 'USDT' },
+                { value: 'busd', label: 'BUSD' }
+            ],
+            litecoin: [{ value: 'ltc', label: 'LTC' }],
+            solana: [
+                { value: 'sol', label: 'SOL' },
+                { value: 'usdt-sol', label: 'USDT' },
+                { value: 'usdc-sol', label: 'USDC' }
+            ]
+        };
+
+        function setupAmlNetworkSelect(networkId, currencyId) {
+            var networkEl = document.getElementById(networkId);
+            var currencyEl = document.getElementById(currencyId);
+            if (!networkEl || !currencyEl) return;
+            networkEl.addEventListener('change', function() {
+                var currencies = amlNetworkCurrencies[this.value] || [];
+                currencyEl.innerHTML = '';
+                currencies.forEach(function(c) {
+                    var opt = document.createElement('option');
+                    opt.value = c.value;
+                    opt.textContent = c.label;
+                    currencyEl.appendChild(opt);
+                });
+            });
+        }
+
+        setupAmlNetworkSelect('dash-aml-network', 'dash-aml-currency');
+    </script>
+</body>
+</html>

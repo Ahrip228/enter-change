@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#00243E">
+    <title>База знаний | Enter-Change</title>
+    <meta name="description" content="Подробная база знаний о работе с Enter-Change. Пошаговые инструкции для начинающих и опытных пользователей.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="adaptive.css">
+    <script src="script.js" defer></script>
+    <script src="faq-search.js" defer></script>
+</head>
+<body>
+    <!-- Хедер -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <svg width="115" height="40" viewBox="0 0 108.49 47.07" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="#0086b1" fill-rule="evenodd" d="m97.01,15.53h8.18v26.36h-58.83v-2.35l-3.77,2.82,3.77,2.82v-2.35h59.77V14.59h-9.13v.94Z"/>
+                            <path fill="#fff" fill-rule="evenodd" d="m3.28,7.14v10.2h11.7v3.37H3.28c-1.68,0-3.11-1.26-3.28-2.87V5.45c0-.93.76-1.69,1.68-1.69h13.38v3.37H3.28Zm1.84,6.77h9.94v-3.35H5.12v3.35Zm57.96,3.43V7.14h11.78v-3.37h-13.38c-.93,0-1.68.76-1.68,1.69v12.39c.17,1.6,1.6,2.87,3.28,2.87h11.7v-3.37h-11.7Zm1.99-3.32h9.54v-3.55h-9.54v3.55Zm31.05,6.53l-6.41-5.81s1.23,0,2.46-.08c1.14,0,2.9-.66,3.51-2.24.97-2.49.7-6.23-.61-7.48-.61-.58-1.14-1.08-2.81-1.08s-12.39-.08-12.39-.08c-.79,0-1.49.66-1.49,1.41v15.53h3.51V7.25h9.4c.79,0,1.41.58,1.41,1.33v1.74c0,.75-.61,1.33-1.41,1.33h-8.61v3.07h2.37l6.32,5.73,4.74.08ZM35.57,3.77v15.19c0,1-.74,1.75-1.73,1.75h-.91c-.5,0-.91-.17-1.24-.58l-9.66-10.52v11.1h-3.38V4.77c0-.58.41-1,.99-1h1.49c.58,0,1.07.25,1.49.67l9.58,10.85V3.77h3.38Zm20.45,3.42v-3.42h-16.94v3.42h6.74v13.52h3.46V7.19h6.74Z"/>
+                            <path fill="#fff" d="m49.66,28.19v3.08c0,.24.17.4.51.4h4.73v1.29h-1.69v1.53h-1.01v-1.53h-.84v1.53h-1.01v-1.53h-.25c-1.01,0-1.77-.72-1.77-1.61v-3.25c0-.89.76-1.61,1.77-1.61h.25v-1.37h1.01v1.37h.68v-1.37h1.01v1.37h1.69v1.29h-4.73c-.27,0-.34.25-.34.41Zm13.71,4.76v-6.59h-1.29v2.6h-3.94v-2.6h-1.37v6.59h1.37v-2.6h3.94v2.6h1.29Zm16.94-6.59v5.94c0,.41-.33.65-.65.65h-.33c-.16,0-.41-.08-.49-.24l-3.82-4.07v4.31h-1.3v-6.18c0-.24.16-.41.41-.41h.57c.24,0,.41.08.57.24l3.74,4.23v-4.47h1.3Zm3.27,5.22v-3.94h5.17v-1.29h-5.84c-.42,0-.75.32-.75.64v4.82c.08.64.67,1.12,1.42,1.12h4.34c.5,0,.83-.32.83-.72v-2.49c0-.4-.42-.72-.83-.72h-4v1.29h3.34v1.29h-3.67Zm8.49-3.92v3.99h5.13v1.3h-5.13c-.73,0-1.37-.49-1.46-1.14v-4.8c0-.33.37-.65.73-.65h5.86v1.3h-5.13Zm.42,2.67h4.71v-1.35h-4.71v1.35Zm-27.24-.71c0-1.83,1.38-3.25,3.06-3.25h3.52v6.59h-1.15v-1.27h-4.21v1.27h-1.23v-3.33Zm1.23,0v.79h4.21v-2.78h-2.38c-1,0-1.84.87-1.84,1.98Z"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <nav class="nav">
+                    <div class="nav-dropdown">
+                        <button class="nav-dropdown-toggle" id="exchange-dropdown">
+                            Обмен
+                            <svg class="dropdown-arrow" width="12" height="8" viewBox="0 0 12 8" fill="none">
+                                <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </button>
+                        <div class="nav-dropdown-menu" id="exchange-dropdown-menu">
+                            <a href="index.html" class="nav-dropdown-item">Крипта на крипту</a>
+                            <a href="index-fiat.html" class="nav-dropdown-item">Фиат на крипту / Крипта на фиат</a>
+                            <a href="index-cash.html" class="nav-dropdown-item">Наличные</a>
+                            <a href="index-dex.html" class="nav-dropdown-item">DEX</a>
+                        </div>
+                    </div>
+                    <div class="nav-dropdown">
+                        <button class="nav-dropdown-toggle" id="trade-dropdown">
+                            Торговать
+                            <svg class="dropdown-arrow" width="12" height="8" viewBox="0 0 12 8" fill="none">
+                                <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </button>
+                        <div class="nav-dropdown-menu" id="trade-dropdown-menu">
+                            <a href="trading.html" class="nav-dropdown-item">Спотовая торговля</a>
+                            <a href="convert.html" class="nav-dropdown-item">Конвертация</a>
+                        </div>
+                    </div>
+                    <a href="aml-check.html" class="nav-link">Проверить AML</a>
+                    <a href="about.html" class="nav-link">О нас</a>
+                    <a href="faq.html" class="nav-link active">FAQ</a>
+                    <a href="contacts.html" class="nav-link">Контакты</a>
+                </nav>
+
+                <div class="header-settings">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Переключить тему">
+                        <svg class="theme-icon theme-icon-light" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 1V3M12 21V23M4.22 4.22L5.64 5.64M18.36 18.36L19.78 19.78M1 12H3M21 12H23M4.22 19.78L5.64 18.36M18.36 5.64L19.78 4.22" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <svg class="theme-icon theme-icon-dark" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="2" fill="currentColor"/>
+                        </svg>
+                    </button>
+
+                    <div class="language-toggle">
+                        <button class="lang-btn active" data-lang="ru">RU</button>
+                        <button class="lang-btn" data-lang="en">EN</button>
+                    </div>
+                </div>
+
+                <div class="header-actions">
+                    <a href="dashboard.html" class="btn btn-secondary">Войти</a>
+                </div>
+
+                <button class="burger-btn" aria-label="Меню">
+                    <div class="burger-btn-line"></div>
+                    <div class="burger-btn-line"></div>
+                    <div class="burger-btn-line"></div>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Мобильное меню -->
+    <div class="mobile-menu">
+        <button class="mobile-menu-close">&times;</button>
+        <nav class="mobile-nav">
+            <a href="index.html" class="mobile-nav-link">Крипта на крипту</a>
+            <a href="index-fiat.html" class="mobile-nav-link">Фиат на крипту</a>
+            <a href="index-cash.html" class="mobile-nav-link">Наличные</a>
+            <a href="index-dex.html" class="mobile-nav-link">DEX</a>
+            <a href="trading.html" class="mobile-nav-link">Спотовая торговля</a>
+            <a href="convert.html" class="mobile-nav-link">Конвертация</a>
+            <a href="aml-check.html" class="mobile-nav-link">Проверить AML</a>
+            <a href="about.html" class="mobile-nav-link">О нас</a>
+            <a href="faq.html" class="mobile-nav-link active">FAQ</a>
+            <a href="contacts.html" class="mobile-nav-link">Контакты</a>
+        </nav>
+        <div class="mobile-menu-footer">
+            <div class="header-settings">
+                <button class="theme-toggle" aria-label="Переключить тему">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+                        <path d="M12 1V3M12 21V23M4.22 4.22L5.64 5.64M18.36 18.36L19.78 19.78M1 12H3M21 12H23M4.22 19.78L5.64 18.36M18.36 5.64L19.78 4.22" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
+                <div class="language-toggle">
+                    <button class="lang-btn active" data-lang="ru">RU</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+            </div>
+            <a href="dashboard.html" class="btn btn-primary btn-full">Войти</a>
+        </div>
+    </div>
+
+    <!-- Прогресс-бар чтения -->
+    <div class="kb-progress-bar" id="kb-progress-bar"></div>
+
+    <!-- Основной контент -->
+    <main class="main">
+        <div class="container">
+            <!-- Заголовок и поиск -->
+            <section class="kb-hero">
+                <h1 class="kb-title">База знаний</h1>
+                <p class="kb-subtitle">Все что нужно знать о работе с Enter-Change</p>
+
+                <div class="kb-search">
+                    <svg class="kb-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/>
+                        <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <input type="text" class="kb-search-input" placeholder="Поиск по базе знаний..." id="kb-search-input">
+                </div>
+            </section>
+
+            <!-- Хлебные крошки -->
+            <nav class="kb-breadcrumbs" id="kb-breadcrumbs">
+                <a href="index.html" class="kb-breadcrumb-link">Главная</a>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                <span class="kb-breadcrumb-current">База знаний</span>
+            </nav>
+
+            <!-- Макет с сайдбаром и контентом -->
+            <div class="kb-layout">
+                <!-- Sticky sidebar навигация (только ПК) -->
+                <aside class="kb-sidebar" id="kb-sidebar">
+                    <div class="kb-sidebar-sticky">
+                        <h3 class="kb-sidebar-title">Содержание</h3>
+                        <nav class="kb-nav">
+                            <a href="#getting-started" class="kb-nav-link" data-section="getting-started">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                                Начало работы
+                            </a>
+                            <a href="#exchange" class="kb-nav-link" data-section="exchange">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path d="M7 16V4M17 8v12M3 16l4-4 4 4M13 8l4 4 4-4" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                                Обмен
+                            </a>
+                            <a href="#trading" class="kb-nav-link" data-section="trading">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path d="M3 3v18h18" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M18 8l-4 4-2-2-4 4" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                                Торговля
+                            </a>
+                            <a href="#aml" class="kb-nav-link" data-section="aml">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path d="M9 11L12 14L22 4" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                                AML проверка
+                            </a>
+                            <a href="#payments" class="kb-nav-link" data-section="payments">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <rect x="2" y="5" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M2 10h20" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                                Оплата и комиссии
+                            </a>
+                            <a href="#security" class="kb-nav-link" data-section="security">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path d="M8 11V7C8 4.79 9.79 3 12 3C14.21 3 16 4.79 16 7V11" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                                Безопасность
+                            </a>
+                            <a href="#referral" class="kb-nav-link" data-section="referral">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <circle cx="8.5" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M20 8V14M17 11H23" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                                Реферальная программа
+                            </a>
+                            <a href="#account" class="kb-nav-link" data-section="account">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <circle cx="12" cy="8" r="5" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                                Личный кабинет
+                            </a>
+                        </nav>
+                    </div>
+                </aside>
+
+                <!-- Основной контент -->
+                <div class="kb-content">
+                    <!-- Категории -->
+                    <section class="kb-categories">
+                <div class="kb-category-grid">
+                    <a href="#getting-started" class="kb-category-card">
+                        <div class="kb-category-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                                <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                                <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Начало работы</h3>
+                        <p>Первые шаги с Enter-Change</p>
+                    </a>
+
+                    <a href="#exchange" class="kb-category-card">
+                        <div class="kb-category-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 16V4M7 4L3 8M7 4L11 8M17 8V20M17 20L21 16M17 20L13 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Обмен криптовалют</h3>
+                        <p>Все виды обмена</p>
+                    </a>
+
+                    <a href="#trading" class="kb-category-card">
+                        <div class="kb-category-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Торговля</h3>
+                        <p>Спотовая торговля и конвертация</p>
+                    </a>
+
+                    <a href="#aml" class="kb-category-card">
+                        <div class="kb-category-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="currentColor" stroke-width="2"/>
+                                <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>AML проверка</h3>
+                        <p>Проверка адресов и транзакций</p>
+                    </a>
+
+                    <a href="#payments" class="kb-category-card">
+                        <div class="kb-category-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                <rect x="2" y="6" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M2 10H22" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3>Платежи и комиссии</h3>
+                        <p>Тарифы и способы оплаты</p>
+                    </a>
+
+                    <a href="#security" class="kb-category-card">
+                        <div class="kb-category-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                <rect x="5" y="11" width="14" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M12 17C12.5523 17 13 16.5523 13 16C13 15.4477 12.5523 15 12 15C11.4477 15 11 15.4477 11 16C11 16.5523 11.4477 17 12 17Z" fill="currentColor"/>
+                                <path d="M8 11V7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7V11" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3>Безопасность</h3>
+                        <p>Защита и конфиденциальность</p>
+                    </a>
+
+                    <a href="#referral" class="kb-category-card">
+                        <div class="kb-category-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                <path d="M16 21V19C16 16.79 14.21 15 12 15H5C2.79 15 1 16.79 1 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <circle cx="8.5" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
+                                <path d="M20 8V14M17 11H23" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3>Реферальная программа</h3>
+                        <p>Зарабатывайте с рефералами</p>
+                    </a>
+
+                    <a href="#account" class="kb-category-card">
+                        <div class="kb-category-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="8" r="5" stroke="currentColor" stroke-width="2"/>
+                                <path d="M20 21C20 16.58 16.42 13 12 13C7.58 13 4 16.58 4 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3>Личный кабинет</h3>
+                        <p>Управление аккаунтом</p>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Популярные статьи -->
+            <section class="kb-section">
+                <h2 class="kb-section-title">Популярные статьи</h2>
+                <div class="kb-article-list">
+                    <a href="#article-first-exchange" class="kb-article-link">
+                        <svg class="kb-article-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Как совершить первый обмен
+                    </a>
+                    <a href="#article-trading-start" class="kb-article-link">
+                        <svg class="kb-article-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Начало работы с торговлей
+                    </a>
+                    <a href="#article-aml-check" class="kb-article-link">
+                        <svg class="kb-article-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Как проверить адрес на AML
+                    </a>
+                    <a href="#article-fiat-exchange" class="kb-article-link">
+                        <svg class="kb-article-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Обмен с использованием фиата
+                    </a>
+                </div>
+            </section>
+
+            <!-- Раздел: Начало работы -->
+            <section class="kb-content-section" id="getting-started">
+                <h2 class="kb-content-title">Начало работы</h2>
+
+                <div class="kb-article" id="article-first-exchange">
+                    <h3 class="kb-article-title">Как совершить первый обмен</h3>
+                    <div class="kb-article-content">
+                        <p>Процесс обмена криптовалюты на Enter-Change прост и интуитивно понятен. Следуйте этим шагам:</p>
+
+                        <div class="kb-step">
+                            <div class="kb-step-number">1</div>
+                            <div class="kb-step-content">
+                                <h4>Выберите валютную пару</h4>
+                                <p>На главной странице выберите криптовалюту, которую хотите отдать, и криптовалюту, которую хотите получить. Например: BTC → USDT</p>
+                            </div>
+                        </div>
+
+                        <div class="kb-step">
+                            <div class="kb-step-number">2</div>
+                            <div class="kb-step-content">
+                                <h4>Укажите сумму</h4>
+                                <p>Введите сумму обмена. Система автоматически рассчитает, сколько вы получите с учетом текущего курса.</p>
+                            </div>
+                        </div>
+
+                        <div class="kb-step">
+                            <div class="kb-step-number">3</div>
+                            <div class="kb-step-content">
+                                <h4>Выберите сеть</h4>
+                                <p>Укажите блокчейн-сеть для отправки и получения средств. Например, для USDT доступны сети TRC-20, ERC-20, BEP-20.</p>
+                            </div>
+                        </div>
+
+                        <div class="kb-step">
+                            <div class="kb-step-number">4</div>
+                            <div class="kb-step-content">
+                                <h4>Заполните данные</h4>
+                                <p>Введите адрес кошелька для получения средств и контактный email. Примите условия использования и AML политику.</p>
+                            </div>
+                        </div>
+
+                        <div class="kb-step">
+                            <div class="kb-step-number">5</div>
+                            <div class="kb-step-content">
+                                <h4>Отправьте средства</h4>
+                                <p>После создания заявки вы получите адрес для перевода. Отправьте указанную сумму на этот адрес.</p>
+                            </div>
+                        </div>
+
+                        <div class="kb-step">
+                            <div class="kb-step-number">6</div>
+                            <div class="kb-step-content">
+                                <h4>Дождитесь подтверждения</h4>
+                                <p>После получения необходимого количества подтверждений в блокчейне, средства автоматически отправятся на ваш кошелек.</p>
+                            </div>
+                        </div>
+
+                        <div class="kb-note">
+                            <strong>Важно:</strong> Среднее время обмена составляет 5-30 минут в зависимости от загруженности блокчейн-сети.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="kb-article">
+                    <h3 class="kb-article-title">Регистрация и вход в систему</h3>
+                    <div class="kb-article-content">
+                        <p>Для базового обмена криптовалют регистрация не требуется. Однако создание аккаунта дает дополнительные возможности:</p>
+                        <ul>
+                            <li>История всех операций</li>
+                            <li>Сохраненные адреса кошельков</li>
+                            <li>Участие в реферальной программе</li>
+                            <li>Доступ к спотовой торговле</li>
+                            <li>Пакеты AML проверок</li>
+                        </ul>
+
+                        <p><strong>Как зарегистрироваться:</strong></p>
+                        <ol>
+                            <li>Нажмите кнопку "Войти" в верхнем правом углу</li>
+                            <li>Выберите "Регистрация"</li>
+                            <li>Укажите email и создайте пароль</li>
+                            <li>Подтвердите email через письмо</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Раздел: Обмен криптовалют -->
+            <section class="kb-content-section" id="exchange">
+                <h2 class="kb-content-title">Обмен криптовалют</h2>
+
+                <div class="kb-article" id="article-crypto-to-crypto">
+                    <h3 class="kb-article-title">Обмен крипта на крипту</h3>
+                    <div class="kb-article-content">
+                        <p>Самый простой и быстрый вид обмена без необходимости верификации.</p>
+
+                        <p><strong>Особенности:</strong></p>
+                        <ul>
+                            <li>Не требуется верификация личности</li>
+                            <li>Поддержка более 50 криптовалют</li>
+                            <li>Выбор типа курса: плавающий или фиксированный</li>
+                            <li>Автоматическая AML проверка всех транзакций</li>
+                        </ul>
+
+                        <p><strong>Плавающий vs Фиксированный курс:</strong></p>
+                        <table class="kb-table">
+                            <thead>
+                                <tr>
+                                    <th>Тип курса</th>
+                                    <th>Описание</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Плавающий</strong></td>
+                                    <td>Курс определяется по фактической стоимости на момент подтверждения транзакции</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Фиксированный</strong></td>
+                                    <td>Курс фиксируется при создании заявки</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="kb-article" id="article-fiat-exchange">
+                    <h3 class="kb-article-title">Обмен с использованием фиата</h3>
+                    <div class="kb-article-content">
+                        <p>Покупка криптовалюты за рубли или продажа криптовалюты за рубли.</p>
+
+                        <p><strong>Требования:</strong></p>
+                        <ul>
+                            <li>Обязательна верификация личности (KYC)</li>
+                            <li>Банковская карта российского банка</li>
+                            <li>Минимальная сумма операции: 1000 RUB</li>
+                        </ul>
+
+                        <p><strong>Процесс верификации:</strong></p>
+                        <ol>
+                            <li>Загрузите фото паспорта (главная страница и прописка)</li>
+                            <li>Сделайте селфи с паспортом</li>
+                            <li>Дождитесь проверки (обычно 10-30 минут)</li>
+                        </ol>
+
+                        <div class="kb-warning">
+                            <strong>Внимание:</strong> Имя владельца банковской карты должно совпадать с данными в документах.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="kb-article">
+                    <h3 class="kb-article-title">Обмен за наличные</h3>
+                    <div class="kb-article-content">
+                        <p>Обмен криптовалюты на наличные в офисах Москвы и Санкт-Петербурга.</p>
+
+                        <p><strong>Как это работает:</strong></p>
+                        <ol>
+                            <li>Создайте заявку на сайте, выбрав "Наличные"</li>
+                            <li>Укажите город и удобный офис</li>
+                            <li>Выберите дату и время визита</li>
+                            <li>Приезжайте в офис с документом</li>
+                            <li>Получите наличные или передайте их</li>
+                        </ol>
+
+                        <p><strong>Офисы в Москве:</strong></p>
+                        <ul>
+                            <li>ЦАО, ул. Тверская, 10 (пн-пт 10:00-20:00, сб-вс 11:00-18:00)</li>
+                            <li>САО, ул. Ленинградский проспект, 45 (пн-пт 10:00-20:00)</li>
+                        </ul>
+
+                        <div class="kb-note">
+                            <strong>Важно:</strong> При сумме более 100,000 RUB рекомендуется предварительное согласование.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="kb-article">
+                    <h3 class="kb-article-title">DEX обмен</h3>
+                    <div class="kb-article-content">
+                        <p>Децентрализованный обмен через протоколы Uniswap, PancakeSwap и другие.</p>
+
+                        <p><strong>Преимущества:</strong></p>
+                        <ul>
+                            <li>Полная конфиденциальность</li>
+                            <li>Обмен происходит напрямую из вашего кошелька</li>
+                            <li>Не требуется регистрация</li>
+                            <li>Доступ к редким токенам</li>
+                        </ul>
+
+                        <p><strong>Требования:</strong></p>
+                        <ul>
+                            <li>MetaMask или Trust Wallet</li>
+                            <li>Наличие ETH/BNB для оплаты газа</li>
+                        </ul>
+
+                        <p><strong>Процесс:</strong></p>
+                        <ol>
+                            <li>Подключите кошелек через WalletConnect</li>
+                            <li>Выберите токены для обмена</li>
+                            <li>Проверьте slippage (обычно 0.5-1%)</li>
+                            <li>Подтвердите транзакцию в кошельке</li>
+                            <li>Дождитесь подтверждения в блокчейне</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Раздел: Торговля -->
+            <section class="kb-content-section" id="trading">
+                <h2 class="kb-content-title">Торговля</h2>
+
+                <div class="kb-article" id="article-trading-start">
+                    <h3 class="kb-article-title">Начало работы с торговлей</h3>
+                    <div class="kb-article-content">
+                        <p>Спотовая торговля позволяет покупать и продавать криптовалюты по рыночным ценам.</p>
+
+                        <p><strong>Требования:</strong></p>
+                        <ul>
+                            <li>Регистрация на платформе</li>
+                            <li>Пополнение торгового баланса</li>
+                        </ul>
+
+                        <p><strong>Интерфейс торговли:</strong></p>
+                        <ul>
+                            <li><strong>График</strong> — свечной график с индикаторами</li>
+                            <li><strong>Стакан ордеров</strong> — заявки на покупку и продажу</li>
+                            <li><strong>Форма торговли</strong> — размещение ордеров</li>
+                            <li><strong>История</strong> — ваши сделки</li>
+                        </ul>
+
+                        <div class="kb-step">
+                            <div class="kb-step-number">1</div>
+                            <div class="kb-step-content">
+                                <h4>Выберите торговую пару</h4>
+                                <p>Например, BTC/USDT означает покупку или продажу Bitcoin за USDT</p>
+                            </div>
+                        </div>
+
+                        <div class="kb-step">
+                            <div class="kb-step-number">2</div>
+                            <div class="kb-step-content">
+                                <h4>Укажите цену и количество</h4>
+                                <p>Для рыночного ордера цена определится автоматически. Для лимитного — укажите желаемую цену.</p>
+                            </div>
+                        </div>
+
+                        <div class="kb-step">
+                            <div class="kb-step-number">3</div>
+                            <div class="kb-step-content">
+                                <h4>Разместите ордер</h4>
+                                <p>Нажмите "Купить" или "Продать". Ордер отобразится в списке открытых ордеров.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="kb-article">
+                    <h3 class="kb-article-title">Конвертация</h3>
+                    <div class="kb-article-content">
+                        <p>Быстрый обмен одной криптовалюты на другую по текущему курсу без создания ордера.</p>
+
+                        <p><strong>Отличия от торговли:</strong></p>
+                        <ul>
+                            <li>Моментальное исполнение по рыночной цене</li>
+                            <li>Не нужно выставлять ордера</li>
+                            <li>Простой интерфейс для новичков</li>
+                        </ul>
+
+                        <p><strong>Процесс конвертации:</strong></p>
+                        <ol>
+                            <li>Выберите валюту, которую отдаете</li>
+                            <li>Выберите валюту, которую получаете</li>
+                            <li>Укажите сумму</li>
+                            <li>Проверьте курс конвертации</li>
+                            <li>Нажмите "Конвертировать"</li>
+                        </ol>
+
+                        <div class="kb-note">
+                            <strong>Совет:</strong> Используйте процентные кнопки (25%, 50%, 75%, 100%) для быстрого выбора суммы.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Раздел: AML проверка -->
+            <section class="kb-content-section" id="aml">
+                <h2 class="kb-content-title">AML проверка</h2>
+
+                <div class="kb-article" id="article-aml-check">
+                    <h3 class="kb-article-title">Как проверить адрес на AML</h3>
+                    <div class="kb-article-content">
+                        <p>AML проверка помогает определить, связан ли криптовалютный адрес с незаконной деятельностью.</p>
+
+                        <p><strong>Процесс проверки:</strong></p>
+                        <ol>
+                            <li>Перейдите на страницу AML проверки</li>
+                            <li>Выберите тип: проверка адреса или транзакции</li>
+                            <li>Выберите блокчейн-сеть</li>
+                            <li>Введите адрес кошелька или хеш транзакции</li>
+                            <li>Нажмите "Проверить"</li>
+                        </ol>
+
+                        <p><strong>Результаты проверки:</strong></p>
+                        <ul>
+                            <li><strong>Risk Score 0-25</strong> — Низкий риск (чистый адрес)</li>
+                            <li><strong>Risk Score 26-75</strong> — Средний риск (требует внимания)</li>
+                            <li><strong>Risk Score 76-100</strong> — Высокий риск (опасный адрес)</li>
+                        </ul>
+
+                        <p><strong>Что проверяется:</strong></p>
+                        <ul>
+                            <li>Связь с санкционированными адресами</li>
+                            <li>Участие в скамах и мошенничестве</li>
+                            <li>Связь с даркнет-маркетплейсами</li>
+                            <li>Миксеры и сервисы анонимизации</li>
+                            <li>Вымогательство и ransomware</li>
+                        </ul>
+
+                        <div class="kb-warning">
+                            <strong>Важно:</strong> Не принимайте средства с адресов с высоким Risk Score. Это может привести к блокировке вашего аккаунта на биржах.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="kb-article">
+                    <h3 class="kb-article-title">Пакеты проверок</h3>
+                    <div class="kb-article-content">
+                        <p>Для регулярных проверок доступны выгодные пакеты.</p>
+
+                        <table class="kb-table">
+                            <thead>
+                                <tr>
+                                    <th>Пакет</th>
+                                    <th>Количество</th>
+                                    <th>Цена за проверку</th>
+                                    <th>Общая стоимость</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Разовая</td>
+                                    <td>1 проверка</td>
+                                    <td>$1.50</td>
+                                    <td>$1.50</td>
+                                </tr>
+                                <tr>
+                                    <td>Стартовый</td>
+                                    <td>5 проверок</td>
+                                    <td>$1.00</td>
+                                    <td>$5.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Базовый</td>
+                                    <td>10 проверок</td>
+                                    <td>$0.90</td>
+                                    <td>$9.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Профи</td>
+                                    <td>50 проверок</td>
+                                    <td>$0.75</td>
+                                    <td>$37.50</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <p><strong>Срок действия:</strong> Проверки не имеют срока годности и могут быть использованы в любое время.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Раздел: Платежи и комиссии -->
+            <section class="kb-content-section" id="payments">
+                <h2 class="kb-content-title">Платежи и комиссии</h2>
+
+                <div class="kb-article">
+                    <h3 class="kb-article-title">Комиссии сервиса</h3>
+                    <div class="kb-article-content">
+                        <p>Enter-Change использует прозрачную систему комиссий.</p>
+
+                        <table class="kb-table">
+                            <thead>
+                                <tr>
+                                    <th>Вид операции</th>
+                                    <th>Комиссия</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Обмен крипта-крипта</td>
+                                    <td>0.5%</td>
+                                </tr>
+                                <tr>
+                                    <td>Обмен с фиатом</td>
+                                    <td>1.5%</td>
+                                </tr>
+                                <tr>
+                                    <td>Наличный обмен</td>
+                                    <td>2%</td>
+                                </tr>
+                                <tr>
+                                    <td>DEX обмен</td>
+                                    <td>0.3% + газ</td>
+                                </tr>
+                                <tr>
+                                    <td>Спотовая торговля (Maker)</td>
+                                    <td>0.1%</td>
+                                </tr>
+                                <tr>
+                                    <td>Спотовая торговля (Taker)</td>
+                                    <td>0.2%</td>
+                                </tr>
+                                <tr>
+                                    <td>Конвертация</td>
+                                    <td>0.3%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="kb-note">
+                            <strong>Важно:</strong> Дополнительно взимается сетевая комиссия (gas fee) при отправке криптовалюты. Размер зависит от загруженности блокчейна.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="kb-article">
+                    <h3 class="kb-article-title">Минимальные суммы</h3>
+                    <div class="kb-article-content">
+                        <p>Минимальные суммы обмена для основных направлений:</p>
+
+                        <ul>
+                            <li>Bitcoin (BTC): 0.001 BTC</li>
+                            <li>Ethereum (ETH): 0.01 ETH</li>
+                            <li>Tether (USDT): 10 USDT</li>
+                            <li>Фиатные операции: 1000 RUB</li>
+                        </ul>
+
+                        <div class="kb-warning">
+                            <strong>Внимание:</strong> Если сумма ниже минимальной, будет применена дополнительная комиссия 1% или фиксированная комиссия 5 USDT (в зависимости от того, что больше).
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Раздел: Безопасность -->
+            <section class="kb-content-section" id="security">
+                <h2 class="kb-content-title">Безопасность</h2>
+
+                <div class="kb-article">
+                    <h3 class="kb-article-title">Двухфакторная аутентификация (2FA)</h3>
+                    <div class="kb-article-content">
+                        <p>2FA защищает ваш аккаунт от несанкционированного доступа.</p>
+
+                        <p><strong>Как включить 2FA:</strong></p>
+                        <ol>
+                            <li>Войдите в личный кабинет</li>
+                            <li>Перейдите в "Настройки" → "Безопасность"</li>
+                            <li>Нажмите "Включить 2FA"</li>
+                            <li>Отсканируйте QR-код в приложении Google Authenticator</li>
+                            <li>Введите код из приложения для подтверждения</li>
+                            <li>Сохраните резервные коды в безопасном месте</li>
+                        </ol>
+
+                        <div class="kb-note">
+                            <strong>Совет:</strong> Храните резервные коды в надежном месте. Они понадобятся, если вы потеряете доступ к телефону.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="kb-article">
+                    <h3 class="kb-article-title">Правила безопасности</h3>
+                    <div class="kb-article-content">
+                        <p><strong>Рекомендации по безопасности:</strong></p>
+                        <ul>
+                            <li>Используйте уникальный пароль (минимум 12 символов)</li>
+                            <li>Обязательно включите 2FA</li>
+                            <li>Не передавайте никому пароль и коды 2FA</li>
+                            <li>Проверяйте URL сайта (должен быть https://enter-change.com)</li>
+                            <li>Не переходите по ссылкам из подозрительных писем</li>
+                            <li>Используйте надежную антивирусную защиту</li>
+                            <li>Не сохраняйте пароли в браузере на публичных компьютерах</li>
+                        </ul>
+
+                        <div class="kb-warning">
+                            <strong>Внимание:</strong> Сотрудники Enter-Change никогда не попросят вас сообщить пароль, коды 2FA или seed-фразу кошелька.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Раздел: Реферальная программа -->
+            <section class="kb-content-section" id="referral">
+                <h2 class="kb-content-title">Реферальная программа</h2>
+
+                <div class="kb-article">
+                    <h3 class="kb-article-title">Как начать зарабатывать</h3>
+                    <div class="kb-article-content">
+                        <p>Приглашайте друзей и получайте 0.5% от каждой их операции.</p>
+
+                        <p><strong>Процесс:</strong></p>
+                        <ol>
+                            <li>Зарегистрируйтесь и войдите в личный кабинет</li>
+                            <li>Пройдите верификацию</li>
+                            <li>Скопируйте реферальную ссылку из раздела "Реферальная программа"</li>
+                            <li>Поделитесь ссылкой с друзьями</li>
+                            <li>Получайте вознаграждение за их операции</li>
+                        </ol>
+
+                        <p><strong>Условия вывода:</strong></p>
+                        <ul>
+                            <li>Минимум 5 активных рефералов</li>
+                            <li>Каждый реферал совершил хотя бы 1 обмен</li>
+                            <li>Выплата в течение 24-48 часов</li>
+                        </ul>
+
+                        <div class="kb-note">
+                            <strong>Важно:</strong> Реферальное вознаграждение не начисляется, если прибыль сервиса менее 0.6% от операции.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Раздел: Личный кабинет -->
+            <section class="kb-content-section" id="account">
+                <h2 class="kb-content-title">Личный кабинет</h2>
+
+                <div class="kb-article">
+                    <h3 class="kb-article-title">Управление аккаунтом</h3>
+                    <div class="kb-article-content">
+                        <p>В личном кабинете доступны следующие разделы:</p>
+
+                        <ul>
+                            <li><strong>Мои заявки</strong> — история всех обменов и их статус</li>
+                            <li><strong>Промокоды</strong> — активация бонусных кодов</li>
+                            <li><strong>Реферальная программа</strong> — ваша ссылка и статистика</li>
+                            <li><strong>AML проверки</strong> — купленные пакеты и история проверок</li>
+                            <li><strong>Настройки</strong> — изменение пароля, 2FA, уведомления</li>
+                        </ul>
+
+                        <p><strong>Как восстановить пароль:</strong></p>
+                        <ol>
+                            <li>Нажмите "Забыли пароль?" на странице входа</li>
+                            <li>Введите email, указанный при регистрации</li>
+                            <li>Проверьте почту и перейдите по ссылке</li>
+                            <li>Создайте новый пароль</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Связаться с поддержкой -->
+                </div><!-- /.kb-content -->
+            </div><!-- /.kb-layout -->
+
+            <!-- Секция поддержки (вне layout для полной ширины) -->
+            <section class="kb-support">
+                <div class="kb-support-card">
+                    <h2>Не нашли ответ?</h2>
+                    <p>Наша служба поддержки работает 24/7 и всегда готова помочь</p>
+                    <div class="kb-support-buttons">
+                        <a href="contacts.html" class="btn btn-primary">Связаться с поддержкой</a>
+                        <a href="index.html" class="btn btn-secondary">На главную</a>
+                    </div>
+                </div>
+            </section>
+        </div><!-- /.container -->
+    </main>
+
+    <!-- Кнопка "Вернуться наверх" -->
+    <button class="kb-back-to-top" id="kb-back-to-top" aria-label="Вернуться наверх">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M18 15L12 9L6 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <a href="index.html">
+                            <svg width="100" height="36" viewBox="0 0 108.49 47.07" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="#0086b1" fill-rule="evenodd" d="m97.01,15.53h8.18v26.36h-58.83v-2.35l-3.77,2.82,3.77,2.82v-2.35h59.77V14.59h-9.13v.94Z"/>
+                                <path fill="#fff" fill-rule="evenodd" d="m3.28,7.14v10.2h11.7v3.37H3.28c-1.68,0-3.11-1.26-3.28-2.87V5.45c0-.93.76-1.69,1.68-1.69h13.38v3.37H3.28Zm1.84,6.77h9.94v-3.35H5.12v3.35Zm57.96,3.43V7.14h11.78v-3.37h-13.38c-.93,0-1.68.76-1.68,1.69v12.39c.17,1.6,1.6,2.87,3.28,2.87h11.7v-3.37h-11.7Zm1.99-3.32h9.54v-3.55h-9.54v3.55Zm31.05,6.53l-6.41-5.81s1.23,0,2.46-.08c1.14,0,2.9-.66,3.51-2.24.97-2.49.7-6.23-.61-7.48-.61-.58-1.14-1.08-2.81-1.08s-12.39-.08-12.39-.08c-.79,0-1.49.66-1.49,1.41v15.53h3.51V7.25h9.4c.79,0,1.41.58,1.41,1.33v1.74c0,.75-.61,1.33-1.41,1.33h-8.61v3.07h2.37l6.32,5.73,4.74.08ZM35.57,3.77v15.19c0,1-.74,1.75-1.73,1.75h-.91c-.5,0-.91-.17-1.24-.58l-9.66-10.52v11.1h-3.38V4.77c0-.58.41-1,.99-1h1.49c.58,0,1.07.25,1.49.67l9.58,10.85V3.77h3.38Zm20.45,3.42v-3.42h-16.94v3.42h6.74v13.52h3.46V7.19h6.74Z"/>
+                                <path fill="#fff" d="m49.66,28.19v3.08c0,.24.17.4.51.4h4.73v1.29h-1.69v1.53h-1.01v-1.53h-.84v1.53h-1.01v-1.53h-.25c-1.01,0-1.77-.72-1.77-1.61v-3.25c0-.89.76-1.61,1.77-1.61h.25v-1.37h1.01v1.37h.68v-1.37h1.01v1.37h1.69v1.29h-4.73c-.27,0-.34.25-.34.41Zm13.71,4.76v-6.59h-1.29v2.6h-3.94v-2.6h-1.37v6.59h1.37v-2.6h3.94v2.6h1.29Zm16.94-6.59v5.94c0,.41-.33.65-.65.65h-.33c-.16,0-.41-.08-.49-.24l-3.82-4.07v4.31h-1.3v-6.18c0-.24.16-.41.41-.41h.57c.24,0,.41.08.57.24l3.74,4.23v-4.47h1.3Zm3.27,5.22v-3.94h5.17v-1.29h-5.84c-.42,0-.75.32-.75.64v4.82c.08.64.67,1.12,1.42,1.12h4.34c.5,0,.83-.32.83-.72v-2.49c0-.4-.42-.72-.83-.72h-4v1.29h3.34v1.29h-3.67Zm8.49-3.92v3.99h5.13v1.3h-5.13c-.73,0-1.37-.49-1.46-1.14v-4.8c0-.33.37-.65.73-.65h5.86v1.3h-5.13Zm.42,2.67h4.71v-1.35h-4.71v1.35Zm-27.24-.71c0-1.83,1.38-3.25,3.06-3.25h3.52v6.59h-1.15v-1.27h-4.21v1.27h-1.23v-3.33Zm1.23,0v.79h4.21v-2.78h-2.38c-1,0-1.84.87-1.84,1.98Z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <p>Enter Change — ваш надёжный партнёр в мире цифровых валют с 2020 года.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Сервис</h4>
+                    <div class="footer-links">
+                        <a href="index.html" class="footer-link">Обмен крипты</a>
+                        <a href="index-fiat.html" class="footer-link">Обмен за фиат</a>
+                        <a href="index-cash.html" class="footer-link">Обмен за наличные</a>
+                        <a href="index-dex.html" class="footer-link">DEX обмен</a>
+                        <a href="aml-check.html" class="footer-link">AML проверка</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Информация</h4>
+                    <div class="footer-links">
+                        <a href="about.html" class="footer-link">О нас</a>
+                        <a href="faq.html" class="footer-link">FAQ</a>
+                        <a href="blog.html" class="footer-link">Блог</a>
+                        <a href="contacts.html" class="footer-link">Контакты</a>
+                        <a href="referral.html" class="footer-link">Реферальная программа</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Документы</h4>
+                    <div class="footer-links">
+                        <a href="terms.html" class="footer-link">Правила использования</a>
+                        <a href="aml.html" class="footer-link">AML регламент</a>
+                        <a href="privacy.html" class="footer-link">Политика конфиденциальности</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span class="footer-copyright">&copy; 2020&ndash;2026 Enter-Change. Все права защищены.</span>
+                <div class="footer-socials">
+                    <a href="#" class="footer-social" aria-label="Telegram">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.461-1.901-.903-1.056-.693-1.653-1.124-2.678-1.8-1.185-.781-.417-1.21.258-1.911.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.139-5.062 3.345-.479.329-.913.489-1.302.481-.428-.009-1.252-.242-1.865-.44-.752-.244-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.831-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635.099-.002.321.023.465.141.12.098.153.229.168.327.016.098.036.322.02.496z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="footer-social" aria-label="Email">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="4" width="20" height="16" rx="2"/>
+                            <path d="M22 7L13.03 12.7a1.94 1.94 0 01-2.06 0L2 7"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
