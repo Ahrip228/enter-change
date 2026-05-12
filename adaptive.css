@@ -1,0 +1,1442 @@
+/* ==========================================
+   АДАПТИВНЫЕ СТИЛИ — ENTER-CHANGE MODERN
+   ОПТИМИЗИРОВАНО ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ
+   ========================================== */
+
+/* ==========================================
+   ЭКРАН <= 1200px (Ноутбуки)
+   ========================================== */
+
+@media (max-width: 1200px) {
+    :root {
+        --font-size-4xl: 40px;
+    }
+
+    .hero-layout {
+        gap: 24px;
+    }
+
+    .hero-content {
+        max-width: 420px;
+        flex-shrink: 1;
+    }
+
+    .exchange-wrapper {
+        max-width: 440px;
+        flex-shrink: 1;
+    }
+
+    .exchange-card {
+        padding: 32px 24px;
+    }
+
+    .steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nav-link {
+        font-size: var(--font-size-sm);
+        padding: 8px 8px;
+    }
+
+    .nav-dropdown-toggle {
+        font-size: var(--font-size-sm);
+        padding: 8px 8px;
+    }
+
+    /* Trading layout */
+    .trading-layout {
+        grid-template-columns: 1fr 380px;
+    }
+}
+
+/* ==========================================
+   ЭКРАН <= 992px (Планшеты)
+   ========================================== */
+
+@media (max-width: 992px) {
+    :root {
+        --font-size-4xl: 36px;
+        --font-size-3xl: 28px;
+    }
+
+    /* Хедер — скрыть навигацию, показать бургер */
+    .nav {
+        display: none;
+    }
+
+    .header-settings {
+        display: none;
+    }
+
+    .burger-btn {
+        display: flex;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 40px 0;
+    }
+
+    .hero-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: var(--font-size-4xl);
+    }
+
+    .conditions-badges {
+        max-width: 500px;
+        margin: 24px auto 0;
+        justify-content: center;
+    }
+
+    .exchange-wrapper {
+        max-width: 500px;
+        width: 100%;
+    }
+
+    /* Дашборд */
+    .dashboard-layout {
+        flex-direction: column;
+    }
+
+    .dashboard-sidebar {
+        width: 100%;
+    }
+
+    .sidebar-nav {
+        flex-direction: row;
+        overflow-x: auto;
+        gap: 4px;
+        padding: 8px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        scroll-snap-type: x mandatory;
+    }
+
+    .sidebar-nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    .sidebar-link {
+        white-space: nowrap;
+        padding: 12px 16px;
+        min-height: 44px;
+        scroll-snap-align: start;
+        display: flex;
+        align-items: center;
+    }
+
+    /* SEO блок */
+    .seo-list-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Карточка AML/центрированная */
+    .card-centered {
+        max-width: 100%;
+    }
+
+    /* Trading page */
+    .trading-layout {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .trading-right {
+        max-width: 100%;
+    }
+
+    .trading-chart-container {
+        min-height: 300px;
+    }
+
+    /* Contacts page */
+    .contacts-layout {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .contacts-form {
+        position: static;
+    }
+}
+
+/* ==========================================
+   ЭКРАН <= 768px (Мобильные / маленькие планшеты)
+   ========================================== */
+
+@media (max-width: 768px) {
+    :root {
+        --font-size-4xl: 32px;
+        --font-size-3xl: 24px;
+        --font-size-2xl: 22px;
+        --container-padding: 16px;
+    }
+
+    /* Хедер */
+    .header-content {
+        padding: 8px 0;
+    }
+
+    /* Скрываем кнопку "Войти" на мобильных (она есть в бургер-меню) */
+    .header-actions {
+        display: none;
+    }
+
+    .header-actions .btn-secondary {
+        font-size: var(--font-size-sm);
+        padding: 0 12px;
+        height: 44px;
+        min-height: 44px;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 24px 0;
+    }
+
+    .hero-subtitle {
+        font-size: var(--font-size-base);
+        line-height: 1.6;
+    }
+
+    /* Форма обмена */
+    .exchange-card {
+        padding: 24px 16px;
+        border-radius: var(--radius-xl);
+    }
+
+    .exchange-card::before {
+        border-radius: var(--radius-xl);
+    }
+
+    .exchange-field {
+        position: static;
+    }
+
+    .exchange-field label {
+        position: static;
+        margin-bottom: 8px;
+        font-size: var(--font-size-sm);
+    }
+
+    .exchange-field-input {
+        padding: 14px 16px;
+        font-size: var(--font-size-lg);
+        min-height: 56px;
+    }
+
+    .currency-select {
+        position: static;
+        transform: none;
+        margin-top: 12px;
+        width: 100%;
+    }
+
+    .currency-select-btn {
+        min-height: 48px;
+        padding: 10px 14px 10px 10px;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .exchange-btn {
+        min-height: 56px;
+        font-size: var(--font-size-lg);
+        font-weight: 700;
+    }
+
+    .rate-type-buttons {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .rate-type-btn {
+        min-height: 52px;
+        padding: 14px 18px;
+        font-size: var(--font-size-base);
+    }
+
+    /* Направления */
+    .directions-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .direction-card {
+        padding: 14px 12px;
+        min-height: 80px;
+    }
+
+    /* Шаги */
+    .steps-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .step-card {
+        text-align: left;
+        display: flex;
+        gap: 16px;
+        padding: 20px;
+    }
+
+    .step-number {
+        margin: 0;
+        width: 48px;
+        height: 48px;
+        flex-shrink: 0;
+    }
+
+    /* Отзывы */
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Прогресс-шаги */
+    .progress-step-number {
+        width: 28px;
+        height: 28px;
+        font-size: 12px;
+    }
+
+    .progress-step-label {
+        font-size: 11px;
+    }
+
+    .progress-step:not(:last-child)::after {
+        top: 14px;
+        left: calc(50% + 18px);
+        width: calc(100% - 36px);
+    }
+
+    /* Карточки */
+    .card {
+        padding: 20px;
+        border-radius: var(--radius-lg);
+    }
+
+    .card-lg {
+        padding: 24px 16px;
+        border-radius: var(--radius-xl);
+    }
+
+    /* Статусные страницы */
+    .status-page {
+        padding: 32px 0;
+    }
+
+    .status-icon {
+        width: 64px;
+        height: 64px;
+    }
+
+    /* О нас */
+    .about-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .about-features {
+        grid-template-columns: 1fr;
+    }
+
+    /* Контакты */
+    .contacts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-card {
+        padding: 20px 16px;
+        min-height: 80px;
+    }
+
+    /* Блог */
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Ценовые карточки */
+    .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* FAQ — увеличить touch-таргет */
+    .faq-question {
+        padding: 18px 16px;
+        font-size: var(--font-size-base);
+        min-height: 56px;
+        line-height: 1.4;
+    }
+
+    .faq-answer-content {
+        padding: 0 16px 18px;
+        line-height: 1.6;
+    }
+
+    /* Футер — увеличить spacing для touch */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .footer-partners {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-link {
+        padding: 10px 0;
+        display: block;
+        min-height: 44px;
+        line-height: 24px;
+    }
+
+    .footer-links {
+        gap: 4px;
+    }
+
+    .footer-social {
+        width: 48px;
+        height: 48px;
+    }
+
+    /* Формы - улучшенные touch-targets */
+    .form-input,
+    .form-select,
+    .form-textarea {
+        min-height: 52px;
+        padding: 14px 16px;
+        font-size: var(--font-size-base);
+    }
+
+    .form-textarea {
+        min-height: 120px;
+    }
+
+    .form-label {
+        font-size: var(--font-size-sm);
+        margin-bottom: 8px;
+        font-weight: 600;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    /* Кнопки - увеличить touch-targets */
+    .btn {
+        min-height: 48px;
+        padding: 12px 20px;
+        font-size: var(--font-size-base);
+        font-weight: 700;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        min-height: 52px;
+        white-space: normal;
+        word-break: break-word;
+        line-height: 1.3;
+        padding: 12px 16px;
+    }
+
+    .btn-full {
+        width: 100%;
+    }
+
+    /* Copy кнопка */
+    .copy-btn {
+        min-height: 48px;
+        padding: 10px 16px;
+    }
+
+    /* SEO */
+    .seo-list-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+    /* Юридические */
+    .legal-content {
+        padding: 24px 0;
+    }
+
+    .legal-content h1 {
+        font-size: var(--font-size-2xl);
+        margin-bottom: 20px;
+    }
+
+    .legal-content h2 {
+        font-size: var(--font-size-xl);
+        margin-top: 32px;
+        margin-bottom: 16px;
+    }
+
+    .legal-content p,
+    .legal-content li {
+        line-height: 1.7;
+        margin-bottom: 16px;
+    }
+
+    /* Как это работает */
+    .how-step {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    /* Табы */
+    .exchange-tabs {
+        font-size: var(--font-size-sm);
+        gap: 8px;
+    }
+
+    .exchange-tab {
+        min-height: 48px;
+        padding: 12px 16px;
+    }
+
+    /* Детали заявки */
+    .order-detail-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+        padding: 14px 0;
+    }
+
+    .order-detail-label {
+        font-size: var(--font-size-sm);
+    }
+
+    .order-detail-value {
+        font-size: var(--font-size-base);
+        white-space: normal;
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+
+    /* Order layout */
+    .order-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .order-details-section .order-card {
+        position: static;
+    }
+
+    .order-card {
+        padding: 24px 20px;
+    }
+
+    /* AML форма */
+    .aml-form-card {
+        flex-direction: column;
+    }
+
+    .aml-form-visual {
+        flex: none;
+        border-right: none;
+        border-bottom: 1px solid var(--border-primary);
+        padding: 28px 24px;
+        gap: 20px;
+    }
+
+    .aml-form-badges {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .aml-form-badge {
+        flex: 0 0 auto;
+    }
+
+    .aml-form-body {
+        padding: 28px 20px;
+    }
+
+    /* AML баланс */
+    .aml-balance-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+    }
+
+    .aml-balance-info {
+        flex-direction: column;
+    }
+
+    .exchange-rate-info {
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    .rate-value {
+        font-size: var(--font-size-sm);
+        white-space: normal;
+        word-break: break-word;
+    }
+
+    /* Таблицы */
+    .table th,
+    .table td {
+        padding: 12px 10px;
+        font-size: var(--font-size-sm);
+    }
+
+    /* Секции */
+    .section,
+    .directions-section,
+    .steps-section,
+    .reviews-section {
+        padding: 40px 0;
+    }
+
+    .section::before,
+    .directions-section::before,
+    .steps-section::before,
+    .reviews-section::before,
+    .seo-text-section::before,
+    .seo-section::before {
+        display: none;
+    }
+
+    .section-title {
+        margin-bottom: 28px;
+        line-height: 1.2;
+    }
+
+    .section-subtitle {
+        line-height: 1.6;
+        margin-top: -20px;
+        margin-bottom: 24px;
+    }
+
+    /* Гриды утилиты */
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    /* QR placeholder */
+    .qr-placeholder {
+        width: 180px;
+        height: 180px;
+    }
+
+    /* SEO текст */
+    .seo-text-content p {
+        text-align: left;
+        line-height: 1.7;
+    }
+
+    /* Мобильный тактильный отклик */
+    .blog-card:active,
+    .direction-card:active,
+    .step-card:active,
+    .review-card:active,
+    .contact-card:active,
+    .pricing-card:active,
+    .about-stat:active,
+    .about-feature:active,
+    .seo-group:active {
+        transform: scale(0.98);
+        opacity: 0.9;
+        transition-duration: 0.1s;
+    }
+
+    .btn:active {
+        transform: scale(0.97);
+        transition-duration: 0.1s;
+    }
+
+    .faq-question:active {
+        opacity: 0.8;
+        transition-duration: 0.1s;
+    }
+
+    .mobile-nav-link:active {
+        background: rgba(0, 134, 177, 0.15);
+        transition-duration: 0.1s;
+    }
+
+    .footer-link:active {
+        opacity: 0.6;
+    }
+
+    /* Scroll-анимации */
+    .animate-on-scroll {
+        transform: translateY(16px);
+    }
+
+    /* Реферальные табы */
+    .ref-tabs {
+        gap: 6px;
+    }
+
+    .ref-tab {
+        padding: 10px 16px;
+        font-size: 13px;
+        min-height: 44px;
+    }
+
+    /* Промо-баннеры */
+    .promo-banner-preview {
+        padding: 16px;
+        justify-content: flex-start;
+    }
+
+    .promo-banner-header {
+        padding: 12px 16px;
+    }
+
+    /* Trading page - mobile optimization */
+    .trading-pair-header {
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px;
+    }
+
+    .trading-pair-selector {
+        min-height: 52px;
+    }
+
+    .trading-chart-container {
+        min-height: 280px;
+    }
+
+    .trading-chart {
+        min-height: 240px;
+    }
+
+    .trading-form-card {
+        padding: 20px 16px;
+    }
+
+    .trading-input {
+        min-height: 52px;
+        font-size: var(--font-size-base);
+    }
+
+    .trading-submit-btn {
+        min-height: 56px;
+        font-size: var(--font-size-lg);
+        font-weight: 800;
+    }
+
+    .trading-percent-btn {
+        min-height: 44px;
+        font-size: var(--font-size-sm);
+    }
+
+    .trading-orders-compact {
+        margin-top: 20px;
+        padding-top: 20px;
+    }
+
+    .trading-order-item {
+        padding: 14px;
+    }
+
+    /* Convert page */
+    .convert-row {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .coin-selector {
+        width: 100%;
+        min-height: 52px;
+    }
+
+    .percent-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    /* Модальные окна - улучшенные */
+    .modal {
+        padding: 24px 16px;
+        border-radius: var(--radius-xl);
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    .modal-header {
+        padding: 0 0 16px 0;
+    }
+
+    .modal-close {
+        width: 44px;
+        height: 44px;
+        min-width: 44px;
+        min-height: 44px;
+    }
+
+    .currency-search {
+        min-height: 52px;
+        font-size: var(--font-size-base);
+    }
+
+    .currency-item {
+        padding: 16px 12px;
+        min-height: 68px;
+    }
+
+    .currency-item-icon {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        min-height: 40px;
+    }
+}
+
+/* ==========================================
+   ЭКРАН <= 480px (Маленькие мобильные)
+   ========================================== */
+
+@media (max-width: 480px) {
+    :root {
+        --font-size-4xl: 28px;
+        --font-size-3xl: 22px;
+        --font-size-2xl: 20px;
+        --font-size-xl: 18px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .hero-title {
+        font-size: 26px;
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        font-size: 15px;
+    }
+
+    /* Бейджи условий */
+    .conditions-badges {
+        max-width: 100%;
+    }
+
+    .condition-badge {
+        padding: 10px 12px;
+        gap: 8px;
+    }
+
+    .badge-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .badge-icon svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .badge-value {
+        font-size: 13px;
+    }
+
+    .badge-label {
+        font-size: 11px;
+    }
+
+    .badge-content {
+        min-width: 0;
+        overflow: hidden;
+    }
+
+    /* Направления в одну колонку */
+    .directions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Ценовые карточки */
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* О нас */
+    .about-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .about-stat {
+        padding: 24px 20px;
+    }
+
+    /* SEO */
+    .seo-list-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Хедер действия */
+    .header-actions .btn {
+        font-size: var(--font-size-sm);
+        padding: 0 12px;
+        height: 40px;
+        min-height: 40px;
+    }
+
+    /* Прогресс-шаги */
+    .progress-steps {
+        padding: 16px 0;
+    }
+
+    .progress-step-number {
+        width: 26px;
+        height: 26px;
+        font-size: 11px;
+    }
+
+    .progress-step-label {
+        font-size: 10px;
+    }
+
+    .progress-step:not(:last-child)::after {
+        top: 13px;
+        left: calc(50% + 16px);
+        width: calc(100% - 32px);
+    }
+
+    /* Карточка типа */
+    .card-type-selector {
+        flex-direction: column;
+    }
+
+    /* Форма обмена - улучшенная */
+    .exchange-network {
+        margin: 16px 0;
+    }
+
+    .exchange-network-label {
+        font-size: 11px;
+        margin-bottom: 8px;
+        padding-left: 2px;
+    }
+
+    .exchange-network-btn {
+        min-height: 52px;
+        padding: 14px 16px;
+        gap: 12px;
+        font-size: var(--font-size-base);
+    }
+
+    .exchange-network-btn .currency-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .swap-btn {
+        width: 40px;
+        height: 40px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .swap-btn svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .checkbox-wrapper {
+        gap: 12px;
+        margin: 16px 0;
+    }
+
+    .checkbox {
+        min-width: 24px;
+        min-height: 24px;
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+    }
+
+    .checkbox-label {
+        font-size: var(--font-size-base);
+        line-height: 1.6;
+    }
+
+    .exchange-submit {
+        min-height: 56px;
+        font-size: var(--font-size-lg);
+        font-weight: 700;
+    }
+
+    /* Status page */
+    .status-page {
+        padding: 24px 0;
+    }
+
+    .status-title {
+        font-size: var(--font-size-xl);
+        line-height: 1.3;
+    }
+
+    .status-description {
+        font-size: var(--font-size-base);
+        line-height: 1.6;
+    }
+
+    /* Risk score */
+    .risk-score-value {
+        font-size: 44px;
+    }
+
+    /* Copy field */
+    .copy-field {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .copy-btn {
+        align-self: stretch;
+        width: 100%;
+    }
+
+    /* Карточки - меньше blur для производительности */
+    .card,
+    .card-lg,
+    .exchange-card {
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+    }
+
+    /* Trading */
+    .trading-stats-row {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .trading-stat {
+        text-align: left;
+    }
+
+    .trading-percent-buttons {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    /* Contacts */
+    .contacts-info {
+        gap: 12px;
+    }
+
+    .contact-card {
+        padding: 18px 14px;
+    }
+
+    .contact-icon {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        min-height: 40px;
+    }
+
+    /* FAQ */
+    .faq-question {
+        font-size: 15px;
+        padding: 16px 14px;
+    }
+
+    /* Footer */
+    .footer-social {
+        width: 44px;
+        height: 44px;
+    }
+
+    /* Модалка валют */
+    .currency-modal {
+        padding: 20px 12px;
+    }
+
+    .currency-item {
+        padding: 14px 10px;
+    }
+}
+
+/* ==========================================
+   БУРГЕР-МЕНЮ (мобильное)
+   ========================================== */
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    background: var(--bg-primary);
+    z-index: 1001;
+    transform: translateX(-100%);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow-y: auto;
+    padding: 80px 20px 20px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.mobile-menu.open {
+    transform: translateX(0);
+}
+
+.mobile-menu-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    min-height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+    font-size: 28px;
+    background: var(--bg-glass);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 2px solid var(--border-color-muted);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-close:hover,
+.mobile-menu-close:active {
+    border-color: var(--accent-cyan);
+    color: var(--accent-cyan);
+    background: rgba(51, 231, 255, 0.1);
+    transform: scale(1.05);
+}
+
+.mobile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.mobile-nav-link {
+    display: block;
+    padding: 16px 20px;
+    min-height: 56px;
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--text-primary);
+    border-radius: var(--radius-md);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link.active {
+    background: rgba(0, 134, 177, 0.12);
+    color: var(--accent-primary);
+    padding-left: 24px;
+}
+
+.mobile-menu-footer {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 2px solid var(--border-color-muted);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.mobile-menu-footer .header-settings {
+    display: flex;
+}
+
+.mobile-menu-footer .btn {
+    width: 100%;
+    min-height: 52px;
+}
+
+/* ==========================================
+   LANDSCAPE MODE для мобильных
+   ========================================== */
+
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        padding: 20px 0;
+    }
+
+    .section {
+        padding: 30px 0;
+    }
+
+    .mobile-menu {
+        padding: 60px 16px 16px;
+    }
+
+    .mobile-nav-link {
+        padding: 12px 16px;
+        min-height: 48px;
+    }
+
+    .status-page {
+        padding: 20px 0;
+    }
+}
+
+/* ==========================================
+   PRINT СТИЛИ
+   ========================================== */
+
+@media print {
+    .header,
+    .footer,
+    .mobile-menu,
+    .burger-btn,
+    .theme-toggle,
+    .language-toggle,
+    .back-to-top {
+        display: none !important;
+    }
+
+    body {
+        background: white;
+        color: black;
+    }
+
+    .card,
+    .exchange-card {
+        border: 1px solid #ccc;
+        box-shadow: none;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+
+    .animate-on-scroll {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
+/* ==========================================
+   REDUCE MOTION — ДОСТУПНОСТЬ
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .animate-on-scroll {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    .mobile-menu {
+        transition: none;
+    }
+
+    .header {
+        transition: none !important;
+    }
+
+    .btn:active,
+    .card:active {
+        transform: none !important;
+    }
+}
+
+/* ==========================================
+   ВЫСОКАЯ КОНТРАСТНОСТЬ
+   ========================================== */
+
+@media (prefers-contrast: high) {
+    :root {
+        --border-color: #ffffff;
+        --text-muted: #cccccc;
+    }
+
+    .btn {
+        border-width: 2px;
+    }
+
+    .card,
+    .exchange-card {
+        border-width: 2px;
+    }
+}
+
+/* AML Check Toggle - Mobile */
+@media (max-width: 768px) {
+    .aml-check-toggle-btn {
+        font-size: var(--font-size-sm);
+        padding: 12px 10px;
+        gap: 6px;
+    }
+
+    .aml-check-toggle-btn svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    /* Knowledge Base - Mobile */
+    .kb-hero {
+        padding: 32px 0 24px;
+        margin-bottom: 24px;
+    }
+
+    .kb-title {
+        font-size: 1.75rem;
+    }
+
+    .kb-subtitle {
+        font-size: var(--font-size-sm);
+        margin-bottom: 24px;
+    }
+
+    .kb-search-input {
+        padding: 14px 20px 14px 44px;
+        font-size: var(--font-size-sm);
+    }
+
+    /* KB Tabs - horizontal scroll on mobile */
+    .kb-tabs {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        gap: 6px;
+        margin-bottom: 24px;
+        padding-bottom: 4px;
+    }
+
+    .kb-tabs::-webkit-scrollbar {
+        display: none;
+    }
+
+    .kb-tab {
+        white-space: nowrap;
+        padding: 6px 16px;
+        font-size: 0.8125rem;
+        flex-shrink: 0;
+    }
+
+    /* KB Accordion - mobile */
+    .kb-accordion-header {
+        padding: 14px 16px;
+        font-size: 0.9375rem;
+        gap: 12px;
+    }
+
+    .kb-article-content {
+        padding: 0 16px 20px;
+        font-size: 0.9375rem;
+        line-height: 1.7;
+    }
+
+    .kb-article-content p {
+        margin-bottom: 16px;
+    }
+
+    .kb-article-content ul,
+    .kb-article-content ol {
+        padding-left: 20px;
+        margin: 16px 0;
+    }
+
+    .kb-article-content li {
+        margin-bottom: 10px;
+    }
+
+    .kb-step {
+        flex-direction: column;
+        gap: 10px;
+        padding: 14px;
+    }
+
+    .kb-step-number {
+        width: 30px;
+        height: 30px;
+        font-size: var(--font-size-sm);
+    }
+
+    .kb-table {
+        font-size: var(--font-size-sm);
+    }
+
+    .kb-table th,
+    .kb-table td {
+        padding: 10px 12px;
+    }
+
+    .kb-support {
+        margin-top: 32px;
+    }
+
+    .kb-support-card {
+        padding: 28px 20px;
+    }
+
+    .kb-support-card h3 {
+        font-size: 1.25rem;
+    }
+
+    .kb-support-buttons {
+        flex-direction: column;
+    }
+
+    .kb-support-buttons .btn {
+        width: 100%;
+    }
+
+    /* KB Back to Top - mobile */
+    .kb-back-to-top {
+        width: 44px;
+        height: 44px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .kb-back-to-top svg {
+        width: 20px;
+        height: 20px;
+    }
+}
